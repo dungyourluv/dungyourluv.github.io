@@ -1,0 +1,235 @@
+/* reset CSS */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+    làm từ ngoài vào trong
+    làm từ trên xuống dưới
+    => từ tổng quan đến chi tiết
+
+*/
+/* 
+    1. vị trí
+    2. kích thước(width, height)
+    3. màu sắc
+    4. kiểu dáng( kiểu chữ,...)
+
+*/
+
+.clear {
+    clear: both;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+
+
+}
+#header{
+    height: 46px;
+    background-color: #000 ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+
+#nav, .subnav { list-style-type: none;
+
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+    text-overflow: clip;
+}
+
+
+#nav li a {
+    display: block;
+    text-decoration: none;
+    line-height: 46px; /* chieu cao cua dong chu */
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav li:hover a, /* viết gộp css khi code giống nhau, khác selector */
+#nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav    {
+    top: 100%;
+    min-width: 160px;
+    display: none;
+   position: absolute;
+   background-color: #fff;
+   width: 100%;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 16px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .search-bth{
+   float: right;
+   padding: 0 25px;
+   
+}
+
+#header .search-bth:hover{
+    background-color: sienna;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: seashell;
+    font-size: 24px;
+    line-height: 46px;
+}
+
+#slider{
+    margin-top: 46px;
+    padding-top: 50%; /* 50% chiều ngang của chính nó(slider) */
+    background: url(/w3_band/assets/img/slider/sky.jfif) center top / cover no-repeat;
+    position: relative;
+}
+
+#slider .text-content {
+    position: absolute;
+    color: #fff;
+    bottom: 047px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 24px;
+}
+
+#slider .text-heading {
+    margin-bottom: 10px;
+}
+
+#slider .text-description {
+    margin-top: 15px;
+}
+
+#content{
+
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    font-weight: 500px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-style: italic;
+    letter-spacing: 3px;
+    opacity: 0.6;
+}
+
+#content .section-heading,
+#content .section-sub-heading {
+    text-align: center;
+}
+
+#content .about-text {
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+#content .member-list {
+    padding-top: 48px;
+}
+
+#content .member-item {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+#content .member-img {
+    width:200px ;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+} 
+
+#content .tour-section {
+    background-color: #000;
+    color: #fff;
+}
+
+.tickets-list {
+    background-color: #fff;
+    color: black;
+    margin-top: 40px;
+}
+
+.tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+#footer{
+
+
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
