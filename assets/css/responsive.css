@@ -40,7 +40,7 @@
     }
 
     .character {
-        min-height: 2103px;
+        min-height: 2500px;
     }
 
     .character .img-char {
@@ -51,4 +51,12 @@
         margin: 19px 5px;
         float: none;
     }
+
+    .character .img-char .info {
+        display: contents;
+        text-align: center;
+    }
+
+    .character .img-char img {
+        width: 100%;
 }
