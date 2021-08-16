@@ -113,7 +113,7 @@
 
 /* Begin search */
 
-#navSearch {
+#navSearch, .mobile-search {
     font-size: 25px;
     float: right;
     color: #fff;
@@ -122,7 +122,11 @@
     text-align: center;
 }
 
-#navSearch:hover {
+.mobile-search {
+    display: none;
+}
+
+#navSearch:hover, .mobile-search:hover {
     background-color: rgb(189, 87, 14);
     border-radius: 10px;
     transition: 2s;
