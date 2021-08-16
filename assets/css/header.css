@@ -1,0 +1,135 @@
+
+
+#header {
+    background-color: black;
+    height: 46px;
+    box-shadow: 0 0 10px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    
+}
+/* begin nav */
+#nav {
+    display: inline-block;
+}
+
+
+#header >#nav> li{
+    display: inline-block;
+   position: relative;
+}
+
+#header>#nav>li:hover > a{
+    background-color: #ccc;
+    color: black;
+    border-radius: 10px ;
+    transition: 2s;
+    transform: scale(110%);
+}
+
+#header >#nav > li >a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 46px;
+    display: block;
+    padding: 0 24px;
+    border-radius: 10px ;
+}
+
+#header .subnav a {
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+    padding: 0 17px;
+    
+}
+
+@keyframes subnav-down {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 120px;
+    }
+}
+
+#header .subnav{
+    position: absolute;
+    background-color:#fff;
+    border-radius: 10px ;
+    width: 180px;
+    box-shadow: 0 0 10px;
+    display: none;
+    overflow: hidden;
+}
+
+#header #nav li:hover .subnav {
+    display: block;
+    animation: subnav-down 2s;
+}
+
+#header .subnav li:hover a{
+    background-color: #ccc;
+    border-radius: 10px ;
+    display: block;
+    transition: 2s;
+    transform: scale(110%);
+}
+
+#header .subnav li{
+    list-style-type: none;
+}
+
+/* End nav */
+
+/* Begin angle-down */
+#nav .nav-down {
+    font-size: 10px;
+}
+
+#nav .nav-up {
+    font-size: 10px;
+    position: relative;
+    left: -14px;
+    display:  none;
+}
+
+#nav li:hover .nav-down{
+    display: none;
+}
+
+#nav li:hover .nav-up {
+    display: inline-block;
+    left: 0;
+    transition: 2s;
+    transform: scale(110%);
+}
+/* End angle-down */
+
+
+/* Begin search */
+
+#navSearch, .mobile-search {
+    font-size: 25px;
+    float: right;
+    color: #fff;
+    padding: 0 25px;
+    line-height: 46px;
+    text-align: center;
+}
+
+.mobile-search {
+    display: none;
+}
+
+#navSearch:hover, .mobile-search:hover {
+    background-color: rgb(189, 87, 14);
+    border-radius: 10px;
+    transition: 2s;
+    transform: scale(110%);
+    cursor: pointer;
+}
