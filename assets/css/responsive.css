@@ -11,8 +11,18 @@
         display: none;
     }
 
+    #nav {
+        display: block;
+    }
+
+    #nav>li:first-child{
+        display: inline-block;
+    }
     .mobile-search {
         display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     #content .content-text {
@@ -59,4 +69,14 @@
 
     .character .img-char img {
         width: 100%;
+}
+
+#header .subnav {
+    position: unset;
+    width: unset;
+    background-color: #000;
+}
+
+#header .subnav a {
+    color: #fff;
 }
