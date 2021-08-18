@@ -1,37 +1,43 @@
-#slider {
-    margin-top: 46px;
-    position: relative;
-    padding-top: 50%;
-    width: 100%;
-    background: url(https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E9ED7F17DC598A62E39E061E6AC4ACEF3F24FD16C3E253978BBA132BDF90E07E/scale?width=1200&aspectRatio=1.78&format=jpeg) center top / cover no-repeat;
+#slider{
+   
+    background-image: url(../img/slider/slider3.JPG);
+    background-position-y: o;
+    background-size: cover;
+    background-position: center;
+    animation: sliderZoomInZoomOut 600s infinite;
 }
 
-#slider:hover {
-    transform: scale(110%);
-    transition: 1s;
-}
 
-#slider .text-content {
-    position: absolute;
-   text-align: center;
-   bottom: 47px;
-   left: 50%;
-   margin-left: calc(-318.33px /2) ;
-   color: aliceblue;
-   text-shadow: -1px 5px 3px #0a0a0a;
-   letter-spacing: 1px;
-}
+.slider__main{
+position: relative;
+display: flex;
+min-height: 300px;
 
-#slider .text-content:hover {
-    transition: 1.5s;
-    transform: scale(110%);
-}
-g
 
-#slider .text-heading {
     
 }
 
-#slider .sub-heading {
-    margin-top: 12px;
+.slider__main__text-content {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    letter-spacing: 0.5mm;
+    color: #fff;
+}
+
+.slider__main__text-heading {
+    text-transform: uppercase;
+    
+}
+
+.slider__main__img-content__img {
+    
+    
+}
+
+.slider__main__img-content__img img{
+    width:100%;
+    height: auto;
 }
