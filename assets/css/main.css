@@ -1,9 +1,223 @@
-*{
-    padding: 0;
+:root {
+    --main-color: #00aeef; 
+    --main2-color: #fff;
+    --main3-color: #b5b5b6;
+    --heading-color: #4b4b4b;
+}
+
+
+.main__selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+.selection__text {
+    color: var(--main-color);
+    font-size: 4.5rem;
     margin: 0;
-    box-sizing: border-box;
+}
+
+.selection__text::before {
+    content: "Best ";
+    color: #000;
+}
+
+.selection__text::after {
+    content: "Company ";
+    color: #000;
+}
+
+#main {
+    height: 100%;
 }
 
 html {
+    font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.selection__sub-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+    text-align: center;
+}
+
+.selection__button {
+    display: flex;
+}
+
+.selection__button-link {
+    margin: 0 14px;
+}
+
+.selection__button-button:hover {
+    background-color: var(--main-color);
+}
+
+.selection__button-button {
+    height:50px ;
+    width: 190px;
+    background-color: #2d3032;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    padding: 0;
+}
+
+.selection__button-button a{
+    display: inline-block;
+    min-width: 170px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 50px;
+}
+
+/* CONTAINER */
+
+.main__container::before {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    display: block;
+    opacity: 0.3;
+}
+
+.main__container {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background-size: cover;
+    background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2020/01/background-dep-840x557.jpg);
+    
+    color: var(--main2-color);
+    
+}
+
+.container__header-text,
+.container__sub-text,
+.container__button {
+    z-index: 1;
+}
+
+.container__header-text{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.container__sub-text {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.container__button {
+    height: 48px;
+    min-width: 308px;
+    background-color: #e4543e;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.container__button:hover {
+    
+    opacity: 0.8;
+}
+
+.container__button a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    padding: 0 10px;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    line-height: 48px;
+}
+
+
+/* test 4 */
+
+.content{background-color: #f2f3f5;
+    padding: 40px 65px;
+    margin-top: 45px;
+    height: 700px;
+}
+
+.content__container{
+    
+    height: 100%;
+}
+
+.container__header {
+    text-align: center;
+}
+
+.container__header-heading{
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--heading-color);
+}
+
+.container__header-sub-heading{
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: var(--main3-color);
+    font-weight: 300;
+
+}
+
+
+
+.container__list{
+
+}
+
+.container__list-main{
+    display: flex;
+}
+
+
+.container__list-main-item {
+    margin: 0 15px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #fff;
+    
+}
+
+.main-item__img {
+    width: 100%;
+}
+
+.main-item__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+
+}
+
+.main-item__content-header {
+    font-size: 2rem;
+    color: var(--heading-color);
+
+}
+
+.main-item__content-sub {
+    font-size: 1.4rem;
+    line-height: 22px;
+    color: var(--main3-color);
+
 }
