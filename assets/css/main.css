@@ -31,8 +31,6 @@
 }
 
 #main {
-    height: 100%;
-    overflow: hidden;
 }
 
 html {
@@ -285,6 +283,34 @@ html {
     .content__main-list-item {
         font-size: 2rem;
     }
+
+    /* test 8 */
+    .test8__container-main {
+        flex-direction: column;
+    }
+    .container-main__content-img {
+        width: 100%;
+    }
+    .test8__container, .main-content__list {
+        padding: 0 8px!important;
+    }
+    .test8__container-header {
+        padding: 20px;
+    }
+    .container-main__content-subtext, 
+    .main-content__list-subtext{
+        font-size: 1.6rem!important;
+    }
+    .main-content__list-item {
+        height: auto !important;
+        flex-direction: column;
+    }
+    .main-content__list-box {
+        padding-top: 20px;
+    }
+    .test8__container {
+        max-height: none !important;
+    }
 }
 /* Test5 */
     
@@ -453,4 +479,113 @@ html {
 #footer h3 {
     font-size: 2rem;
     font-weight: 300;
+}
+
+/* test 8 */
+.add--sub {
+    color: #a6a6a6;
+    line-height: 27px;
+}
+
+.test8 {
+
+}
+
+.test8__container{
+    max-width: 1208px;
+    max-height: 808px;
+    background-color: #f2f3f5;
+    padding: 20px 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.test8__container-header{
+}
+
+.container-header__heading{
+    font-size: 3.5rem;
+
+}
+
+
+.container-header__subtext{
+    font-size: 1.6rem;
+
+}
+
+.test8__container-main {
+    display: flex;
+}
+
+.container-main__content{
+    max-width: 446px;
+}
+
+.container-main__content-subtext, 
+.main-content__list-subtext {
+    font-size: 1.4rem;
+}
+
+.container-main__content, .main-content__list-item {
+    padding: 20px 0;
+
+}
+.img--border-radius{
+    border-radius: 10px;
+}
+.container-main__content-img {
+    max-width: 446px;
+}
+
+
+.container-main__content-header,
+.main-content__list-header{
+    font-size: 2rem;
+    color: #2a2a2a;
+
+}
+
+.container-main__content-subtext{
+
+}
+
+.test8__container-main__main-content {
+
+}
+
+.main-content__list{
+    list-style: none;
+    margin: 0;
+}
+
+.main-content__list-item {
+    height: 120px;
+    display: flex;
+}
+
+.main-content__list-item h4 {
+    margin: 0;
+}
+
+.main-content__list-box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.main-content__list-item img {
+    width: auto;
+}
+
+.main-content__list-img{
+    width: 102px;
+}
+
+.main-content__list-header {
+
+}
+
+.main-content__list-subtext {
+
 }
