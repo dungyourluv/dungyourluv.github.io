@@ -194,7 +194,11 @@ html {
     padding: 6px;
     border-radius: 4px;
     background-color: #fff;
-    
+    transition: all 0.5s ease;
+}
+
+.container__list-main-item:hover {
+    transform: translateY(-10px);
 }
 
 .main-item__img {
@@ -310,6 +314,9 @@ html {
     }
     .test8__container {
         max-height: none !important;
+    }
+    .main__container {
+        display: none;
     }
 }
 /* Test5 */
