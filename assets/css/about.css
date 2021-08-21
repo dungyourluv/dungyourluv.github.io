@@ -5,6 +5,7 @@
 
 .content__about{
     background-image: url(../img/About/aboutBgr.JPG);
+    background-attachment: fixed;
     background-position: inherit;
     background-size: cover;
     background-repeat: no-repeat;
