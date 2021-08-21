@@ -5,7 +5,8 @@
     padding: 70px 70px;
     background-color: var(--main-content-color);
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
 }
 .content__class-info{
     flex: 1;
@@ -24,6 +25,7 @@
 }
 .content__class-img{
     flex: 1;
+    text-align: center;
 }
 .content__class-main-img{
     width: 540px;

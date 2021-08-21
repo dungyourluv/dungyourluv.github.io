@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>K57A1 Info</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/about.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/member.css">
     <link rel="stylesheet" href="./assets/css/news.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
 </head>
 
@@ -60,12 +61,18 @@
                             <input type="text" class="nav-second__search-input" placeholder="Enter keyword">
                         </div>
                     </div>
-                    <div class="nav-second__main">
+                    <div class="header__nav-menu">
+                       <button onclick="openMenu()" class="header__nav-menu-button">
+                           <i class="fas fa-bars nav--menu"></i>
+                       </button>
+                    </div>
+                    <div class="nav-second__main"
+                    id="js--nav-second__main">
                         <a href="#home" class="nav-second__main-link">Home</a>
-                        <a href="#about" class="nav-second__main-link">About</a>
-                        <a href="#class" class="nav-second__main-link">My Class</a>
-                        <a href="#Member" class="nav-second__main-link">Member</a>
-                        <a href="#news" class="nav-second__main-link">News</a>
+                        <a href="#" class="nav-second__main-link">About Me</a>
+                        <a href="#" class="nav-second__main-link">My Class</a>
+                        <a href="#" class="nav-second__main-link">News</a>
+                        <a href="#" class="nav-second__main-link">Contact</a>
                         <button class="nav-second__main-login main--btn">Login</button>
                     </div>
                 </div>
@@ -75,14 +82,17 @@
         <!-- Content -->
         <div class="content">
             <!-- About Me -->
-            <div class="content__about-container" id="about">
+            <div class="content__about-container">
                 <div class="content__about">
-                    <div class="about__text main--text-shadown">
-                        <p class="about__text-first">I'm Dũng Welcome To My Demo Web</p>
-                        <h1 class="about__text-heading">
-                            A Little About My Class
-                        </h1>
-                        <button class="about__text-button main--btn">Let's start</button>
+                  
+                    <div class="content__about-text-add">
+                        <div class="about__text main--text-shadown">
+                            <p class="about__text-first">I'm Dũng Welcome To My Demo Web</p>
+                            <h1 class="about__text-heading">
+                                A Little About Me
+                            </h1>
+                            <button class="about__text-button main--btn">Let's start</button>
+                        </div>
                     </div>
                     <div class="about__Info">
                         <div class="about__Info-form main--border-box main--text-shadown main--box-move-up ">
@@ -113,7 +123,7 @@
                 </div>
             </div>
             <!-- My Class -->
-            <div class="content__class-container" id="class">
+            <div class="content__class-container">
                 <div class="content__class">
                     <div class="content__class-info main--box-zoom">
                         <h1 class="content__class-heading">
@@ -127,12 +137,12 @@
                         </button>
                     </div>
                     <div class="content__class-img main--box-zoom">
-                        <img src="./assets/img/myclass/mainimg.JPG" alt="This my class" class="content__class-main-img main--border-box">
+                        <img src="./assets/img/Class/ClassMainImg.JPG" alt="This my class" class="content__class-main-img main--border-box">
                     </div>
                 </div>
             </div>
             <!-- Member -->
-            <div class="content__member-container" id="Member">
+            <div class="content__member-container">
                 <div class="content__member">
                     <div class="content__member-heading main--box-zoom">
                         <h1 class="content__member-text-heading">
@@ -144,7 +154,7 @@
                     </div>
                     <div class="content__member-menu">
                         <ul class="content__member-list">
-                            <li class="content__member-member main--box-zoom">
+                            <li class="content__member-member sp--hidden main--box-zoom">
                                 <a href="" class="content__member-avatar-link">
                                     <img src="https://avatarfiles.alphacoders.com/293/thumb-293541.png" alt="" class="content__member-avatar">
 
@@ -153,7 +163,7 @@
                                     Dung
                                 </p>
                             </li>
-                            <li class="content__member-member main--box-zoom">
+                            <li class="content__member-member sp--hidden main--box-zoom ">
                                 <a href="" class="content__member-avatar-link">
                                     <img src="https://avatarfiles.alphacoders.com/293/thumb-293420.jpg" alt="" class="content__member-avatar">
 
@@ -162,7 +172,7 @@
                                     Dung
                                 </p>
                             </li>
-                            <li class="content__member-member main--box-zoom">
+                            <li class="content__member-member main--box-zoom sp--hidden">
                                 <a href="" class="content__member-avatar-link">
                                     <img src="https://avatarfiles.alphacoders.com/292/thumb-292841.jpg" alt="" class="content__member-avatar">
 
@@ -204,7 +214,7 @@
                 </div>
             </div>
             <!-- News -->
-            <div class="content__news-container" id="news">
+            <div class="content__news-container">
                 <div class="content__news">
                     <div class="content__news-heading">
                         <h1 class="content__news-heading-main">
@@ -219,7 +229,7 @@
                                 </div>
                                 <div class="news__main-item-content">
                                     <p class="news__main-item-content-heading">
-                                        Thầy và những người bạn.
+                                        Le The Dung
                                     </p>
                                 </div>
                             </li>
@@ -229,7 +239,7 @@
                                 </div>
                                 <div class="news__main-item-content">
                                     <p class="news__main-item-content-heading">
-                                        Vẫn là thầy và những người bạn hạnh kiểm tốt.
+                                        Le The Dung
                                     </p>
                                 </div>
                             </li>
@@ -239,7 +249,7 @@
                                 </div>
                                 <div class="news__main-item-content">
                                     <p class="news__main-item-content-heading">
-                                        Not heading
+                                        Le The Dung
                                     </p>
                                 </div>
                             </li>
@@ -260,6 +270,13 @@
             </div>
         </div>
     </div>
+    <script>
+        function openMenu() {
+            var menu = document.getElementById("js--nav-second__main");
+            console.log(menu);
+
+        }
+    </script>
 </body>
 
 </html>
