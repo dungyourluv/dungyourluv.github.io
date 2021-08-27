@@ -130,3 +130,9 @@
 .header__nav-menu {
     display: none;
     }
+.open__nav {
+        display: block;
+        opacity: 1;
+    transition: all ease 1s;
+
+    }
