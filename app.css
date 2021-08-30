@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: calc(100% / 3);
+  border: 2px solid black;
+  position: relative;
+  transition: 0.3s;
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3) {
+  border-top: none;
+}
+.box:nth-child(1),
+.box:nth-child(4),
+.box:nth-child(7) {
+  border-left: none;
+}
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+  border-bottom: none;
+}
+.box:nth-child(3),
+.box:nth-child(6),
+.box:nth-child(9) {
+  border-right: none;
+}
+
+.box.x::after,
+.box.x::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 120px;
+  width: 10px;
+  background-color: red;
+  display: block;
+  border-radius: 10px;
+}
+
+.box.x::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.box.x::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.box.o::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  border: 8px solid rgb(0, 89, 255);
+  display: block;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table.this-x > .box:not(.x):not(.o):hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 120px;
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0.315);
+  display: block;
+  border-radius: 10px;
+}
+
+.table.this-x > .box:not(.x):not(.o):hover::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 120px;
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0.301);
+  display: block;
+  border-radius: 10px;
+}
+
+.table.this-x > .box:not(.x):not(.o):hover:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.table.this-x > .box:not(.x):not(.o):hover::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.box:not(.x):not(.o):hover {
+  cursor: pointer;
+}
+
+.table:not(.this-x) > .box:not(.x):not(.o):hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  border: 8px solid rgba(0, 0, 0, 0.315);
+  display: block;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
