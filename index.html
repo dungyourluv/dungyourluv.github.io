@@ -1,27 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TicTocToe</title>
-    <link rel="stylesheet" href="app.css" />
-  </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K57A1 Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/class.css">
+    <link rel="stylesheet" href="./assets/css/member.css">
+    <link rel="stylesheet" href="./assets/css/news.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+</head>
+
+<body>
     <div id="main">
-      <span class="" id="alert"></span>
-      <div class="table this-x">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-      </div>
+        <!-- Header -->
+        <div class="header" id="home">
+            <div class="header__nav">
+                <div class="header__nav-first">
+                    <div class="nav-first__contact">
+                        <i class="fas fa-phone-alt icon--color "></i>
+                        <p class="nav-first__number-phone nav-first--add">
+                            +84 123 098 753
+                        </p>
+                        <i class="fas fa-envelope icon--color"></i>
+                        <p class="nav-first__text-gmail nav-first--add">
+                            teeedunn.@gmail.com
+                        </p>
+                    </div>
+                    <div class="nav-first__gmail nav-first--add">
+                    </div>
+                    <div class="nav-first__social">
+                        <a href="#" class="nav-first__social-link">
+                            <i class="fab fa-facebook icon--color"></i>
+                        </a>
+                        <a href="#" class="nav-first__social-link">
+                            <i class="fab fa-facebook-messenger icon--color"></i>
+                        </a>
+                        <a href="#" class="nav-first__social-link">
+                            <i class="fab fa-instagram icon--color"></i>
+                        </a>
+                        <a href="#" class="nav-first__social-link">
+                            <i class="fab fa-twitter icon--color"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__nav-second">
+                    <div class="nav-second__logo">
+                        <a href="#home" class="logo-link">TheDunG</a>
+                        <div class="nav-second__search">
+                            <i class="fas fa-search search--border icon--color"></i>
+                            <input type="text" class="nav-second__search-input" placeholder="Enter keyword">
+                        </div>
+                    </div>
+                    <div class="header__nav-menu">
+                       <button class="header__nav-menu-button js-header__nav-menu-button">
+                           <i class="fas fa-bars nav--menu"></i>
+                       </button>
+                    </div>
+                    <div class="nav-second__main"
+                    id="js--nav-second__main">
+                        <a href="#home" class="nav-second__main-link">Home</a>
+                        <a href="#about" class="nav-second__main-link">About Me</a>
+                        <a href="#class" class="nav-second__main-link">My Class</a>
+                        <a href="#member" class="nav-second__main-link">Member</a>
+                        <a href="#news" class="nav-second__main-link">News</a>
+                        <button class="nav-second__main-login main--btn">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- About Me -->
+            <div class="content__about-container">
+                <div class="content__about" id="about">
+                  
+                    <div class="content__about-text-add">
+                        <div class="about__text main--text-shadown">
+                            <p class="about__text-first">I'm Dũng Welcome To My Demo Web</p>
+                            <h1 class="about__text-heading">
+                                A Little About Me
+                            </h1>
+                            <button class="about__text-button main--btn">Let's start</button>
+                        </div>
+                    </div>
+                    <div class="about__Info">
+                        <div class="about__Info-form 
+                                     main--border-box
+                                     main--box-move-up ">
+                            <a href="" class="about__Info-link">
+                                <i class="fab fa-facebook-messenger about--logo about--messenger"></i>
+                                <h4 class="about__Info-form-content">
+                                    Chat With Me
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="about__Info-form main--border-box  main--box-move-up">
+                            <a href="" class="about__Info-link">
+                                <i class="fab fa-instagram about--logo about--instagram"></i>
+                                <h4 class="about__Info-form-content ">
+                                    Follow Me On Instagram
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="about__Info-form main--border-box  main--box-move-up">
+                            <a href="" class="about__Info-link">
+                                <i class="fab fa-facebook about--logo about--facebook"></i>
+                                <h4 class="about__Info-form-content">
+                                    Add Friend Me On My Facebook
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- My Class -->
+            <div class="content__class-container" id="class">
+                <div class="content__class">
+                    <div class="content__class-info main--box-zoom">
+                        <h1 class="content__class-heading">
+                            This is my class
+                        </h1>
+                        <p class="content__class-sub">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, itaque. Commodi nulla magni impedit a, quae numquam veritatis laboriosam odio suscipit omnis vel vitae aspernatur harum quasi minus optio sequi?
+                        </p>
+                        <button class="content__class-button main--btn">
+                            Learn More
+                        </button>
+                    </div>
+                    <div class="content__class-img main--box-zoom">
+                        <img src="./assets/img/Class/ClassMainImg.JPG" alt="This my class" class="content__class-main-img">
+                    </div>
+                </div>
+            </div>
+            <!-- Member -->
+            <div class="content__member-container" id="member">
+                <div class="content__member">
+                    <div class="content__member-heading main--box-zoom">
+                        <h1 class="content__member-text-heading">
+                            They are my Member in my class
+                        </h1>
+                        <div class="content__member-sub">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rem incidunt culpa eaque repellat corporis quibusdam asperiores eos, placeat laudantium officiis possimus tempora. Et, magnam dolore error dolores perspiciatis soluta!
+                        </div>
+                    </div>
+                    <div class="content__member-menu">
+                        <ul class="content__member-list">
+                            <li class="content__member-member sp--hidden main--box-zoom">
+                                <a href="" class="content__member-avatar-link">
+                                    <img src="https://avatarfiles.alphacoders.com/293/thumb-293541.png" alt="" class="content__member-avatar">
+
+                                </a>
+                                <p class="content__member-name">
+                                    Dung
+                                </p>
+                            </li>
+                            <li class="content__member-member sp--hidden main--box-zoom ">
+                                <a href="" class="content__member-avatar-link">
+                                    <img src="https://avatarfiles.alphacoders.com/293/thumb-293420.jpg" alt="" class="content__member-avatar">
+
+                                </a>
+                                <p class="content__member-name">
+                                    Dung
+                                </p>
+                            </li>
+                            <li class="content__member-member main--box-zoom sp--hidden">
+                                <a href="" class="content__member-avatar-link">
+                                    <img src="https://avatarfiles.alphacoders.com/292/thumb-292841.jpg" alt="" class="content__member-avatar">
+
+                                </a>
+                                <p class="content__member-name">
+                                    Dung
+                                </p>
+                            </li>
+                            <li class="content__member-member main--box-zoom">
+                                <a href="" class="content__member-avatar-link">
+                                    <img src="https://avatarfiles.alphacoders.com/292/thumb-292825.jpg" alt="" class="content__member-avatar">
+
+                                </a>
+                                <p class="content__member-name">
+                                    Dung
+                                </p>
+                            </li>
+                            <li class="content__member-member main--box-zoom">
+                                <a href="" class="content__member-avatar-link">
+                                    <img src="https://avatarfiles.alphacoders.com/292/thumb-292935.jpg" alt="" class="content__member-avatar">
+
+                                </a>
+                                <p class="content__member-name">
+                                    Dung
+                                </p>
+                            </li>
+                            <li class="content__member-member main--box-zoom">
+                                <a href="" class="content__member-avatar-link">
+                                    <img src="https://avatarfiles.alphacoders.com/294/thumb-294573.jpg" alt="" class="content__member-avatar">
+
+                                </a>
+                                <p class="content__member-name">
+                                    Dung
+                                </p>
+                            </li>
+                        </ul>
+                        <button class="content__member-btn main--btn">Learn more</button>
+                    </div>
+                </div>
+            </div>
+            <!-- News -->
+            <div class="content__news-container">
+                <div class="content__news">
+                    <div class="content__news-heading">
+                        <h1 class="content__news-heading-main">
+                            Latest News
+                        </h1>
+                    </div>
+                    <div class="content__news-main" id="news">
+                        <ul class="content__news-main-list">
+                            <li class="content__news-main-item main--box-move-up">
+                                <div class="news__main-item-bgr">
+                                    <img src="./assets/img/News/New1.JPG" alt="" class="new__main-item-img ">
+                                </div>
+                                <div class="news__main-item-content">
+                                    <p class="news__main-item-content-heading">
+                                        Le The Dung
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="content__news-main-item main--box-move-up">
+                                <div class="news__main-item-bgr">
+                                    <img src="./assets/img/News/New2.JPG" alt="" class="new__main-item-img ">
+                                </div>
+                                <div class="news__main-item-content">
+                                    <p class="news__main-item-content-heading">
+                                        Le The Dung
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="content__news-main-item main--box-move-up">
+                                <div class="news__main-item-bgr">
+                                    <img src="./assets/img/News/New3.JPG" alt="" class="new__main-item-img ">
+                                </div>
+                                <div class="news__main-item-content">
+                                    <p class="news__main-item-content-heading">
+                                        Le The Dung
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <button href="#" class="content__news-main-button main--btn">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer__main">
+                <div class="footer__main-copyright">
+                    Copyright dungyourluv.github.io, all rights reserved. By LeTheDuG
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="app.js"></script>
-  </body>
+    <script>
+        function openMenu() {
+            var menu = document.getElementById("js--nav-second__main");
+            console.log(menu);
+
+        }
+    </script>
+</body>
+
 </html>
