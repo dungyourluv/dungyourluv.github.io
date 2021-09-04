@@ -134,6 +134,8 @@ function contentChange() {
   var content = document.querySelector(".content__design-theme");
   var heading = content.querySelector(".content__theme-heading");
   var container = content.querySelectorAll(".content__theme-container");
+  document.querySelector(".header__logo-link").innerHTML =
+    '<div class="header__main-logo"></div>';
   icons.forEach(function (icon, indexBtn) {
     icon.addEventListener("click", function () {
       main.style.left = "0";
