@@ -1,0 +1,65 @@
+:root {
+  --btn-color: #8d39fa;
+  --text-color: #fff;
+  --hover-text-color: #000;
+  --hover-color: #f1f3f5;
+  --main-text-color: rgb(105, 103, 103);
+}
+
+#main {
+  min-height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.btn--style {
+  outline: none;
+  height: 40px;
+  padding: 0 10px;
+  background-color: var(--btn-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn--size-s {
+  width: 110px;
+}
+input {
+  outline: none;
+}
