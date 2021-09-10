@@ -33,11 +33,10 @@ function btnMove() {
     subMove();
   });
 }
-
+var index = 0;
 function yesBtnClick() {
   var mainLove = document.querySelector(".content-love");
   yesBtn.addEventListener("click", function () {
-    onSubmit();
     mainLove.classList.add("active");
   });
   var close = document.querySelector(".close");
@@ -47,6 +46,8 @@ function yesBtnClick() {
   typeText(".input-text", "Tại nhà anh giàu <33333333");
   typeText2(".pop-name", "Duy đẹp gái");
 }
+
+var textcheck = "";
 function typeText(element, text) {
   var cre = document.querySelector(".text");
   cre.innerHTML = "Made by  DunG chicken";
@@ -56,13 +57,36 @@ function typeText(element, text) {
     if (i < text.length + 1) {
       document.querySelector(element).value = "";
       document.querySelector(element).value = text.slice(0, i);
-
       i++;
+      index += 1;
     } else {
       document.querySelector(element).value = text.slice(0, text.length);
     }
   });
+  let subMit = document.querySelector(".submit");
+  subMit.addEventListener("click", function () {
+    if (index >= text.length) {
+      document.querySelector(".noti-form2").classList.remove("active");
+      document.querySelector(".input-text").style.border = "none";
+
+      let content = document.querySelector(".submit-content");
+      content.classList.add("active");
+      document.querySelector(
+        ".submit-content > p:nth-child(1)"
+      ).innerText = `Nhà anh giàu bởi vì anh có em đấy ${YourName} à <3`;
+      document.querySelector(
+        ".submit-content > p:nth-child(2)"
+      ).innerText = `yêu ${YourName} 3000 <3`;
+      document.querySelector(".btn-submit").onclick = function () {
+        window.location.href = "https://www.facebook.com/teee.dunn/";
+      };
+    } else {
+      document.querySelector(".input-text").style.border = "2px solid red";
+      document.querySelector(".noti-form2").classList.add("active");
+    }
+  });
 }
+
 function typeText2(element, text) {
   var change = document.querySelector(element);
   change.addEventListener("keyup", function () {
@@ -99,6 +123,9 @@ function popClick() {
     document.querySelector(
       ".heading.love"
     ).innerHTML = `${YourName} của tớ ơi, cho tớ hỏi tại sao cậu lại click vào nút xanh thế nhỉ hihi`;
+    document.querySelector(
+      ".noti-form2"
+    ).innerText = `Trả lời hết đi mà ${YourName}`;
   }
 }
 function subMove() {

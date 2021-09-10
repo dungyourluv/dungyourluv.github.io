@@ -300,3 +300,10 @@ button {
     margin: 10px 0px;
   }
 }
+
+.noti-form2 {
+  color: red;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
