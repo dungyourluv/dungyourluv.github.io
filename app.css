@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+}
+
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s all;
+}
+
+/* start */
+
+.main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #ddb3b8;
+  color: #fff;
+  min-height: 100vh;
+}
+.pop-up {
+}
+.pop-up-content {
+}
+.content {
+  width: 100%;
+}
+.header {
+}
+.heading {
+}
+.sub-heading {
+  margin: 20px 0;
+}
+.content-button {
+}
+.btn {
+  color: #fff;
+  min-width: 200px;
+  min-height: 42px;
+  font-size: 18px;
+  position: relative;
+  transition: all 0.1s;
+}
+.yes {
+  background: lightgreen;
+}
+.no {
+  background-color: rgb(207, 117, 132);
+}
+.btn:hover,
+.submit:hover,
+.love-close:hover {
+  filter: brightness(1.3);
+}
+.btn.yes {
+  left: 0;
+  top: 0;
+}
+.btn.no {
+}
+
+.content-love,
+.pop-up {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.love-header {
+}
+.heading {
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.form > label {
+  align-self: flex-start;
+  padding-left: 20px;
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.form > .text {
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+.main-love {
+  border-radius: 10px;
+  background-color: rgb(211, 145, 133);
+  width: calc(100% - 200px);
+  padding: 50px 0;
+  position: relative;
+}
+
+.input-text,
+.pop-name {
+  outline: none;
+  margin-left: 20px;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 18px;
+  color: plum;
+  width: 80%;
+  border: none;
+  transition: 0.3s all;
+}
+
+.input-text:hover,
+.input-text:focus,
+.pop-name:hover,
+.pop-name:focus {
+  border: 1px solid rgb(192, 69, 89);
+}
+
+.submit {
+  width: 10%;
+  margin: 0 4px;
+  margin-left: 40px;
+  background-color: rgb(135, 231, 122);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.form2 {
+  display: flex;
+  justify-content: center;
+}
+
+.love-close {
+  transition: 1s;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 8px;
+  font-size: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(212, 91, 121);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.close {
+}
+
+.active {
+  visibility: inherit !important;
+  opacity: 1 !important;
+  transition: 0.3s;
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+  z-index: 1;
+}
+
+.pop-up-content {
+  background-color: pink;
+  padding: 40px;
+  border-radius: 6px;
+}
+
+.pop-up-content > label {
+  font-size: 24px;
+}
+
+.pop-btn {
+  margin: 10px;
+}
+
+.sub-no {
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: inline-block;
+  width: 300%;
+  line-height: 30px;
+  min-height: 30px;
+  position: absolute;
+  top: -74px;
+  background-color: #fff;
+  color: black;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.sub-no::before {
+  display: block;
+  position: absolute;
+  content: "";
+  border: 17px solid;
+  border-color: #fff transparent transparent transparent;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-submit {
+  background-color: plum;
+  font-weight: bold;
+}
+
+.submit-content {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  visibility: hidden;
+  transition: 0.5s all;
+  opacity: 0;
+}
+.submit-content > p {
+  display: flex;
+  margin: 0 20px;
+  align-content: center;
+}
+
+.submit-content > p:nth-child(3) {
+  display: flex;
+}
+
+.submit-content > p:nth-child(3) > button {
+  margin-left: 50px;
+}
+
+@media (max-width: 740px) {
+  .main {
+    overflow: hidden;
+  }
+  .content-button {
+    display: flex;
+    flex-direction: column;
+  }
+  .pop-name {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .pop-btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .main-love {
+    width: auto;
+  }
+  .form2 {
+    flex-direction: column;
+  }
+  .submit {
+    width: 100%;
+    margin-left: 0;
+  }
+  .input-text {
+    width: 100%;
+    margin: 10px 0px;
+  }
+}
