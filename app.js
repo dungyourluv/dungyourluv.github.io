@@ -134,7 +134,7 @@ function subMove() {
     "Không bắt được làm chóa hihi",
     "Bắt anh đi em ",
     "nhấn nút màu Xanh kìa emm",
-    "",
+    "Không nhấn được tớ đâu hihihi",
     "Bảo nhấn thì nhấn đi cứ cố nhấn anh làm gì",
     "Thôi mà em em khó tính quá đó",
     "Anh ở đây nè",
