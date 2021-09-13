@@ -1,191 +1,74 @@
-var _0xccf2 = [
-  "\x2E\x68\x65\x61\x64\x65\x72\x2D\x62\x74\x6E",
-  "\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72\x41\x6C\x6C",
-  "\x2E\x6A\x73\x2D\x2D\x72\x65\x6D\x6F\x76\x65",
-  "\x2E\x70\x6C\x61\x79\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x2D\x73\x6C\x69\x64\x65\x72",
-  "\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72",
-  "\x64\x69\x76",
-  "\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74",
-  "\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C",
-  "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x61\x69\x6E\x2D\x6C\x6F\x61\x64\x65\x72\x22\x3E\x0D\x0A\x20\x3C\x69\x20\x63\x6C\x61\x73\x73\x3D\x22\x66\x61\x73\x20\x66\x61\x2D\x73\x70\x69\x6E\x6E\x65\x72\x20\x6C\x6F\x61\x64\x65\x72\x2D\x2D\x69\x63\x6F\x6E\x22\x3E\x3C\x2F\x69\x3E\x0D\x0A\x3C\x2F\x64\x69\x76\x3E",
-  "\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64",
-  "\x6D\x61\x69\x6E",
-  "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64",
-  "\x2E\x6D\x61\x69\x6E\x2D\x6C\x6F\x61\x64\x65\x72",
-  "\x6C\x6F\x61\x64\x2D\x2D\x68\x69\x64\x64\x65\x6E",
-  "\x61\x64\x64",
-  "\x63\x6C\x61\x73\x73\x4C\x69\x73\x74",
-  "\x64\x69\x73\x70\x6C\x61\x79",
-  "\x73\x74\x79\x6C\x65",
-  "\x6E\x6F\x6E\x65",
-  "\x68\x65\x61\x64\x65\x72\x2D\x2D\x62\x74\x6E\x2D\x61\x63\x74\x69\x76\x65",
-  "\x72\x65\x6D\x6F\x76\x65",
-  "\x66\x6F\x72\x45\x61\x63\x68",
-  "\x63\x6C\x69\x63\x6B",
-  "\x61\x64\x64\x2D\x2D\x73\x69\x7A\x65",
-  "\x61\x63\x74\x69\x76\x65",
-  "\x61\x64\x64\x2D\x2D\x73\x6C\x69\x64\x65\x72",
-  "\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72",
-  "\x2E\x73\x6B\x69\x6C\x6C\x2D\x6E\x75\x6D\x62\x65\x72",
-  "\x2E\x73\x6B\x69\x6C\x6C",
-  "\x64\x61\x74\x61\x2D\x6E\x75\x6D\x62\x65\x72",
-  "\x67\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65",
-  "\x70\x75\x73\x68",
-  "\x69\x6E\x6E\x65\x72\x54\x65\x78\x74",
-  "\x77\x69\x64\x74\x68",
-  "\x2E\x63\x6F\x6E\x74\x65\x6E\x74\x2D\x2D\x73\x75\x62",
-  "\x6C\x65\x66\x74",
-  "\x30",
-  "\x2E\x6D\x61\x69\x6E\x2D\x6D\x61\x69\x6C\x6C",
-  "\x63\x6F\x72\x65\x70\x70\x65\x72\x30\x33\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D",
-  "\x2E\x63\x6F\x6E\x74\x65\x6E\x74\x2D\x6D\x61\x69\x6E\x2D\x68\x65\x61\x64\x65\x72\x20\x3E\x20\x68\x31",
-  "\x68\x65\x61\x64",
-  "\x74\x69\x6D\x65",
-  "\x63\x6F\x6E\x74\x65\x6E\x74",
-  "\x61\x75\x74\x68\x6F\x72",
-  "\x6E\x61\x6D\x65",
-  "\x2E\x72\x65\x73\x75\x6D\x65\x2D\x63\x6F\x6E\x74\x65\x6E\x74",
-  "\x41\x69\x3F",
-  "\x31\x33\x20\x73\x65\x70\x20\x32\x30\x32\x31",
-  "\x41\x69\x20\x6B\x68\xF4\x6E\x67\x20\x67\x69\u1EA3\x20\x64\u1ED1\x69\x2C\x20\x61\x69\x20\x6B\x68\xF4\x6E\x67\x20\x64\u1EC5\x20\x74\x68\x61\x79\x20\u0111\u1ED5\x69\x2C\x20\x6B\x68\xF4\x6E\x67\x20\x61\x69\x20\x6C\xE0\x20\x61\x69\x20\x63\u1EE7\x61\x20\x61\x69\x20\x68\u1EBF\x74\x2E\x20\x48\xE0\x20\x74\u1EA5\x74\x20\x70\x68\u1EA3\x69\x20\x63\x6F\x69\x20\x6D\u1ED9\x74\x20\x73\u1ED1\x20\x6E\x67\u01B0\u1EDD\x69\x2C\x20\x6D\u1ED9\x74\x20\x73\u1ED1\x20\x63\x68\x75\x79\u1EC7\x6E\x20\x71\x75\x61\x6E\x20\x74\x72\u1ECD\x6E\x67\x20\u0111\u1EBF\x6E\x20\x74\x68\u1EBF\x2E",
-  "\x6C\x65\x74\x68\x65\x64\x75\x6E\x67",
-  "\x44\x6F\x6E\u2019\x74\x20\x63\x72\x79\x20\x62\x65\x63\x61\x75\x73\x65\x20\x69\x74\u2019\x73\x20\x6F\x76\x65\x72\x2C\x20\x73\x6D\x69\x6C\x65\x20\x62\x65\x63\x61\x75\x73\x65\x20\x69\x74\x20\x68\x61\x70\x70\x65\x6E\x65\x64",
-  "\x43\x75\u1ED9\x63\x20\x73\u1ED1\x6E\x67",
-  "\x43\x75\u1ED9\x63\x20\x73\u1ED1\x6E\x67\x20\x67\x69\u1ED1\x6E\x67\x20\x6E\x68\u01B0\x20\u0111\x69\x20\x78\x65\x20\u0111\u1EA1\x70\x2E\x20\u0110\u1EC3\x20\x67\x69\u1EEF\x20\x74\x68\u0103\x6E\x67\x20\x62\u1EB1\x6E\x67\x2C\x20\x62\u1EA1\x6E\x20\x70\x68\u1EA3\x69\x20\x74\x69\u1EBF\x70\x20\x74\u1EE5\x63\x20\x64\x69\x20\x63\x68\x75\x79\u1EC3\x6E",
-  "\x41\x6C\x62\x65\x72\x74\x20\x45\x69\x6E\x73\x74\x65\x69\x6E",
-  "\x59\x6F\x75\x20\x6F\x6E\x6C\x79\x20\x6C\x69\x76\x65\x20\x6F\x6E\x63\x65\x2C\x20\x62\x75\x74\x20\x69\x66\x20\x79\x6F\x75\x20\x64\x6F\x20\x69\x74\x20\x72\x69\x67\x68\x74\x2C\x20\x6F\x6E\x63\x65\x20\x69\x73\x20\x65\x6E\x6F\x75\x67\x68",
-  "\x4D\u1EE5\x63\x20\x74\x69\xEA\x75",
-  "\x4D\u1EE5\x63\x20\x74\x69\xEA\x75\x20\x63\u1EE7\x61\x20\x63\x75\u1ED9\x63\x20\x73\u1ED1\x6E\x67\x20\x6C\xE0\x20\x62\u1ECB\x20\x6B\x68\x75\u1EA5\x74\x20\x70\x68\u1EE5\x63\x20\x74\x72\u01B0\u1EDB\x63\x20\x6E\x68\u1EEF\x6E\x67\x20\u0111\x69\u1EC1\x75\x20\x6C\u1EDB\x6E\x20\x6C\x61\x6F\x20\x76\xE0\x20\x6C\u1EDB\x6E\x20\x6C\x61\x6F\x20\x68\u01A1\x6E\x20\x6E\u1EEF\x61",
-  "\x52\x61\x69\x6E\x65\x72\x20\x4D\x61\x72\x69\x61\x20\x52\x69\x6C\x6B\x65",
-  "\x49\x6E\x20\x74\x68\x72\x65\x65\x20\x77\x6F\x72\x64\x73\x20\x49\x20\x63\x61\x6E\x20\x73\x75\x6D\x20\x75\x70\x20\x65\x76\x65\x72\x79\x74\x68\x69\x6E\x67\x20\x49\u2019\x76\x65\x20\x6C\x65\x61\x72\x6E\x65\x64\x20\x61\x62\x6F\x75\x74\x20\x6C\x69\x66\x65\x3A\x20\x69\x74\x20\x67\x6F\x65\x73\x20\x6F\x6E",
-  "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x63\x6F\x6E\x74\x65\x6E\x74\x2D\x74\x65\x78\x74\x22\x3E\x0D\x0A\x20\x20\x3C\x68\x32\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x68\x65\x61\x64\x69\x6E\x67\x22\x3E",
-  "\x3C\x2F\x68\x32\x3E\x0D\x0A\x20\x20\x3C\x73\x70\x61\x6E\x3E",
-  "\x3C\x2F\x73\x70\x61\x6E\x3E\x0D\x0A\x20\x20\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x74\x65\x78\x74\x22\x3E\x0D\x0A\x20\x20",
-  "\x0D\x0A\x20\x20\x3C\x2F\x70\x3E\x0D\x0A\x20\x20\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x73\x75\x62\x2D\x74\x65\x78\x74\x22\x3E\x22",
-  "\x22\x3C\x2F\x70\x3E\x0D\x0A\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x73\x74\x69\x63\x6B\x32\x22\x3E\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x6E\x6F\x74\x65\x22\x3E",
-  "\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x3C\x2F\x64\x69\x76\x3E",
-  "\x2E\x6D\x61\x69\x6E\x2D\x61\x76\x74\x20\x3E\x20\x69\x6D\x67",
-  "\x2E\x2F\x61\x73\x73\x65\x74\x73\x2F\x69\x6D\x67\x73\x2F\x69\x6D\x61\x67\x65\x2E\x6A\x70\x67",
-  "\x2E\x2F\x61\x73\x73\x65\x74\x73\x2F\x69\x6D\x67\x73\x2F\x69\x6D\x61\x67\x65\x31\x2E\x6A\x70\x67",
-  "\x2E\x2F\x61\x73\x73\x65\x74\x73\x2F\x69\x6D\x67\x73\x2F\x69\x6D\x61\x67\x65\x32\x2E\x6A\x70\x67",
-  "\x2E\x2F\x61\x73\x73\x65\x74\x73\x2F\x69\x6D\x67\x73\x2F\x69\x6D\x61\x67\x65\x33\x2E\x6A\x70\x67",
-  "\x6C\x65\x6E\x67\x74\x68",
-  "\x73\x72\x63",
-  "\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65",
-  "\x2E\x70\x6C\x61\x79\x2D\x6C\x69\x73\x74\x73\x2D\x69\x74\x65\x6D\x73",
-  "\x75\x72\x6C",
-  "\x69\x6D\x67",
-  "\x72\x6F\x6D\x61\x6E",
-  "\x2E\x2F\x61\x73\x73\x65\x74\x73\x2F\x61\x75\x64\x69\x6F\x2F\x72\x6F\x6D\x61\x6E\x2E\x6D\x70\x33",
-  "\x64\x75\x6E\x67",
-  "\x6C\x65\x6D\x6F\x6E\x20\x74\x72\x65\x65",
-  "\x2E\x2F\x61\x73\x73\x65\x74\x73\x2F\x61\x75\x64\x69\x6F\x2F\x6C\x65\x6D\x6F\x6E\x74\x72\x65\x65\x2E\x6D\x70\x33",
-  "\x59\xEA\x75\x20\x78\x61",
-  "\x2E\x2F\x61\x73\x73\x65\x74\x73\x2F\x61\x75\x64\x69\x6F\x2F\x79\x65\x75\x78\x61\x2E\x6D\x70\x33",
-  "\x51\x75\x61\x6E\x67\x20\x54\x72\x75\x6E\x67",
-  "\x48\u1EB9\x6E\x20\x6D\u1ED9\x74\x20\x6D\x61\x69",
-  "\x2E\x2F\x61\x73\x73\x65\x74\x73\x2F\x61\x75\x64\x69\x6F\x2F\x68\x65\x6E\x6D\x6F\x74\x6D\x61\x69\x2E\x6D\x70\x33",
-  "\x42\xF9\x69\x20\x41\x6E\x68\x20\x54\x75\u1EA5\x6E",
-  "\x2E\x73\x6F\x6E\x67\x2D\x70\x6C\x61\x79\x2D\x6E\x61\x6D\x65",
-  "\x2E\x70\x6C\x61\x79\x2D\x6C\x69\x73\x74\x2D\x69\x6D\x67",
-  "\x0D\x0A\x20\x20\x3C\x6C\x69\x20\x63\x6C\x61\x73\x73\x3D\x22\x70\x6C\x61\x79\x2D\x6C\x69\x73\x74\x2D\x69\x74\x65\x6D\x22\x3E\x0D\x0A\x20\x20\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x70\x6C\x61\x79\x2D\x6C\x69\x73\x74\x2D\x69\x6D\x67\x22\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x22",
-  "\x22\x20\x61\x6C\x74\x3D\x22\x22\x3E\x0D\x0A\x20\x20\x20\x20\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x20\x20\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x70\x6C\x61\x79\x2D\x6C\x69\x73\x74\x2D\x74\x69\x74\x6C\x65\x22\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x68\x32\x20\x63\x6C\x61\x73\x73\x3D\x22\x73\x6F\x6E\x67\x2D\x6E\x61\x6D\x65\x22\x3E\x20",
-  "\x20\x3C\x2F\x68\x32\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x73\x75\x62\x2D\x73\x6F\x6E\x67\x2D\x6E\x61\x6D\x65\x22\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x73\x70\x61\x6E\x3E\x20",
-  "\x20\x3C\x2F\x73\x70\x61\x6E\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x73\x70\x61\x6E\x3E\x54\x69\x6D\x65\x3C\x2F\x73\x70\x61\x6E\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x20\x20\x20\x20\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x20\x20\x3C\x2F\x6C\x69\x3E",
-  "\x2E\x70\x6C\x61\x79\x2D\x61\x75\x64\x69\x6F\x20\x3E\x20\x61\x75\x64\x69\x6F",
-  "\x2E\x73\x74\x61\x72\x74",
-  "\x2E\x70\x61\x75\x73\x65\x2D\x2D\x69\x63\x6F\x6E",
-  "\x2E\x70\x6C\x61\x79\x2D\x6C\x69\x73\x74\x2D\x69\x74\x65\x6D",
-  "\x70\x6C\x61\x79",
-  "\x69\x6E\x6C\x69\x6E\x65",
-  "\x70\x61\x75\x73\x65",
-  "\x6D\x75\x73\x69\x63\x2D\x2D\x72\x6F\x74\x65",
-  "\x73\x6F\x6E\x67\x2D\x2D\x68\x6F\x76\x65\x72",
-  "\x2E\x6A\x73\x2D\x2D\x69\x6E\x66\x6F",
-  "\x68\x65\x61\x64\x65\x72",
-  "\x41\x20\x6C\x69\x74\x74\x65\x6C\x20\x61\x62\x6F\x75\x74\x20\x6D\x65",
-  "\x6C\x65\x20\x74\x68\x65\x20\x64\x75\x6E\x67\x20\x61\x62\x63\x73",
-  "\x66\x61\x76\x6F\x72\x69\x74\x65",
-  "\x63\x72\x75\x73\x68",
-  "\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x61\x69\x6E\x2D\x68\x65\x61\x64\x69\x6E\x67\x22\x3E\x0D\x0A\x20\x20\x20\x20\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x61\x69\x6E\x2D\x68\x65\x61\x64\x69\x6E\x67\x2D\x74\x65\x78\x74\x22\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x69\x20\x63\x6C\x61\x73\x73\x3D\x22\x66\x61\x72\x20\x66\x61\x2D\x69\x64\x2D\x62\x61\x64\x67\x65\x20\x74\x65\x78\x74\x2D\x2D\x69\x63\x6F\x6E\x22\x3E\x3C\x2F\x69\x3E\x20",
-  "\x0D\x0A\x20\x20\x20\x20\x3C\x2F\x70\x3E\x0D\x0A\x20\x20\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x63\x6F\x6E\x74\x65\x6E\x74\x22\x3E\x0D\x0A\x20\x20\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x63\x6F\x6E\x74\x65\x6E\x74\x2D\x74\x65\x78\x74\x22\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x68\x32\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x68\x65\x61\x64\x69\x6E\x67\x22\x3E",
-  "\x3C\x2F\x68\x32\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x73\x70\x61\x6E\x3E\x31\x33\x20\x73\x65\x70\x20\x32\x30\x32\x31\x3C\x2F\x73\x70\x61\x6E\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x74\x65\x78\x74\x22\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x20\x20",
-  "\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x2F\x70\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x73\x75\x62\x2D\x74\x65\x78\x74\x22\x3E\x22\x4D\x61\x64\x65\x20\x62\x79\x20\x6C\x65\x74\x68\x65\x64\x75\x6E\x67\x22\x3C\x2F\x70\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x73\x74\x69\x63\x6B\x32\x22\x3E\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x73\x75\x6D\x65\x2D\x6E\x6F\x74\x65\x22\x3E\x59\x6F\x75\x20\x73\x63\x72\x61\x74\x63\x68\x20\x6D\x79\x20\x62\x61\x63\x6B\x20\x61\x6E\x64\x20\x49\u2019\x6C\x6C\x20\x73\x63\x72\x61\x74\x63\x68\x20\x79\x6F\x75\x72\x73\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x20\x20\x20\x20\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x20\x20\x3C\x2F\x64\x69\x76\x3E",
-];
-var btns = document[_0xccf2[1]](_0xccf2[0]);
-var tasks = document[_0xccf2[1]](_0xccf2[2]);
-var slider = document[_0xccf2[4]](_0xccf2[3]);
+var btns = document.querySelectorAll(".header-btn");
+var tasks = document.querySelectorAll(".js--remove");
+var slider = document.querySelector(".play-control-slider");
+
 function start() {
   loader();
+  /* custom();
+  creStory(); */
   avtChange();
+  /* click();
+   */
   audio();
 }
 start();
+
 function loader() {
-  var _0x12d7x6 = document[_0xccf2[6]](_0xccf2[5]);
-  _0x12d7x6[_0xccf2[7]] = `${_0xccf2[8]}`;
-  document[_0xccf2[11]](_0xccf2[10])[_0xccf2[9]](_0x12d7x6);
-  var loader = document[_0xccf2[4]](_0xccf2[12]);
+  var div = document.createElement("div");
+  div.innerHTML = `<div class="main-loader">
+ <i class="fas fa-spinner loader--icon"></i>
+</div>`;
+  document.getElementById("main").appendChild(div);
+  var loader = document.querySelector(".main-loader");
   setTimeout(() => {
-    loader[_0xccf2[15]][_0xccf2[14]](_0xccf2[13]);
+    loader.classList.add("load--hidden");
     setTimeout(() => {
-      loader[_0xccf2[17]][_0xccf2[16]] = _0xccf2[18];
+      loader.style.display = "none";
     }, 500);
     custom();
     creStory();
     click();
   }, 2000);
 }
+
 function btnRemove() {
-  btns[_0xccf2[21]]((_0x12d7x8) => {
-    _0x12d7x8[_0xccf2[15]][_0xccf2[20]](_0xccf2[19]);
+  btns.forEach((btn) => {
+    btn.classList.remove("header--btn-active");
   });
 }
+
 function click() {
-  btns[_0xccf2[21]]((_0x12d7x8, _0x12d7xa) => {
-    _0x12d7x8[_0xccf2[26]](_0xccf2[22], () => {
+  btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
       btnRemove();
-      _0x12d7x8[_0xccf2[15]][_0xccf2[14]](_0xccf2[19]);
-      switch (_0x12d7xa) {
+      btn.classList.add("header--btn-active");
+      switch (i) {
         case 0:
           remove();
           break;
-        case 1:
+        case 1 /* resume */:
           remove();
-          tasks[_0x12d7xa - 1][_0xccf2[15]][_0xccf2[14]](
-            _0xccf2[23],
-            _0xccf2[24],
-            _0xccf2[25]
-          );
-          animation(_0x12d7xa - 1);
+          tasks[i - 1].classList.add("add--size", "active", "add--slider");
+          animation(i - 1);
           break;
-        case 2:
+        case 2 /* skill */:
           remove();
-          tasks[_0x12d7xa - 1][_0xccf2[15]][_0xccf2[14]](
-            _0xccf2[23],
-            _0xccf2[24],
-            _0xccf2[25]
-          );
-          animation(_0x12d7xa - 1);
+          tasks[i - 1].classList.add("add--size", "active", "add--slider");
+          animation(i - 1);
           skills();
+
           break;
-        case 3:
+        case 3 /* highlight */:
           remove();
-          tasks[_0x12d7xa - 1][_0xccf2[15]][_0xccf2[14]](
-            _0xccf2[23],
-            _0xccf2[24],
-            _0xccf2[25]
-          );
-          animation(_0x12d7xa - 1);
+          tasks[i - 1].classList.add("add--size", "active", "add--slider");
+          animation(i - 1);
+
           break;
-        case 4:
+        case 4 /* download */:
           remove();
-          tasks[_0x12d7xa - 1][_0xccf2[15]][_0xccf2[14]](
-            _0xccf2[23],
-            _0xccf2[24],
-            _0xccf2[25]
-          );
-          animation(_0x12d7xa - 1);
+          tasks[i - 1].classList.add("add--size", "active", "add--slider");
+          animation(i - 1);
+
           break;
         default:
           break;
@@ -193,187 +76,270 @@ function click() {
     });
   });
 }
+
 function remove() {
-  tasks[_0xccf2[21]]((_0x12d7xc) => {
-    _0x12d7xc[_0xccf2[15]][_0xccf2[20]](_0xccf2[23], _0xccf2[24], _0xccf2[25]);
+  tasks.forEach((task) => {
+    task.classList.remove("add--size", "active", "add--slider");
   });
 }
+
 function skills() {
-  var _0x12d7xe = document[_0xccf2[1]](_0xccf2[27]);
-  var skills = document[_0xccf2[1]](_0xccf2[28]);
-  var _0x12d7xf = [];
-  _0x12d7xe[_0xccf2[21]]((_0x12d7x10, _0x12d7xa) => {
-    let _0x12d7x11 = _0x12d7x10[_0xccf2[30]](`${_0xccf2[29]}`);
-    _0x12d7xf[_0xccf2[31]](_0x12d7x11);
-    _0x12d7x10[_0xccf2[32]] = _0x12d7x11;
+  var numbers = document.querySelectorAll(".skill-number");
+  var skills = document.querySelectorAll(".skill");
+  var data = [];
+  numbers.forEach((number, i) => {
+    let stt = number.getAttribute(`data-number`);
+    data.push(stt);
+    number.innerText = stt;
   });
-  skills[_0xccf2[21]]((_0x12d7x12, _0x12d7xa) => {
-    _0x12d7x12[_0xccf2[17]][_0xccf2[33]] = _0x12d7xf[_0x12d7xa];
+  skills.forEach((skill, i) => {
+    skill.style.width = data[i];
   });
 }
-function animation(_0x12d7x14) {
-  var _0x12d7x15 = document[_0xccf2[1]](_0xccf2[34]);
-  _0x12d7x15[_0x12d7x14][_0xccf2[17]][_0xccf2[35]] = _0xccf2[36];
+
+function animation(index) {
+  var contents = document.querySelectorAll(".content--sub");
+  contents[index].style.left = "0";
 }
+
 function custom() {
-  const _0x12d7x17 = [];
-  const _0x12d7x18 = document[_0xccf2[4]](_0xccf2[37]);
-  _0x12d7x18[_0xccf2[32]] = _0xccf2[38];
-  const _0x12d7x19 = document[_0xccf2[1]](_0xccf2[0]);
-  const _0x12d7x1a = document[_0xccf2[1]](_0xccf2[39]);
-  _0x12d7x19[_0xccf2[21]]((_0x12d7x1b) => {
-    _0x12d7x17[_0xccf2[31]](_0x12d7x1b[_0xccf2[32]]);
+  const values = [];
+  const mail = document.querySelector(".main-maill");
+  mail.innerText = "corepper03@gmail.com";
+  const headers = document.querySelectorAll(".header-btn");
+  const contentHeader = document.querySelectorAll(".content-main-header > h1");
+  headers.forEach((value) => {
+    values.push(value.innerText);
   });
-  _0x12d7x1a[_0xccf2[21]]((_0x12d7x1c, _0x12d7xa) => {
-    _0x12d7x1c[_0xccf2[32]] = _0x12d7x17[_0x12d7xa + 1];
+  contentHeader.forEach((ch, i) => {
+    ch.innerText = values[i + 1];
   });
 }
+
 function creStory() {
   class storys {
-    _0x12d7x1e(_0x12d7x1f, _0x12d7x20, _0x12d7x21, _0x12d7x22, _0x12d7x23) {
-      (this[_0xccf2[40]] = _0x12d7x1f),
-        (this[_0xccf2[41]] = _0x12d7x20),
-        (this[_0xccf2[42]] = _0x12d7x21),
-        (this[_0xccf2[43]] = _0x12d7x22);
-      this[_0xccf2[44]] = _0x12d7x23;
+    constructor(head, time, content, author, name) {
+      (this.head = head),
+        (this.time = time),
+        (this.content = content),
+        (this.author = author);
+      this.name = name;
     }
   }
-  var _0x12d7x24 = document[_0xccf2[4]](_0xccf2[45]);
-  var _0x12d7x25 = [
+
+  var storyContainer = document.querySelector(".resume-content");
+
+  var arrayStory = [
     (loveStory1 = new storys(
-      _0xccf2[46],
-      _0xccf2[47],
-      _0xccf2[48],
-      _0xccf2[49],
-      _0xccf2[50]
+      "Ai?",
+      "13 sep 2021",
+      "Ai không giả dối, ai không dễ thay đổi, không ai là ai của ai hết. Hà tất phải coi một số người, một số chuyện quan trọng đến thế.",
+      "lethedung",
+      "Don’t cry because it’s over, smile because it happened"
     )),
     (loveStory2 = new storys(
-      _0xccf2[51],
-      _0xccf2[47],
-      _0xccf2[52],
-      _0xccf2[53],
-      _0xccf2[54]
+      "Cuộc sống",
+      "13 sep 2021",
+      "Cuộc sống giống như đi xe đạp. Để giữ thăng bằng, bạn phải tiếp tục di chuyển",
+      "Albert Einstein",
+      "You only live once, but if you do it right, once is enough"
     )),
     (loveStory3 = new storys(
-      _0xccf2[55],
-      _0xccf2[47],
-      _0xccf2[56],
-      _0xccf2[57],
-      _0xccf2[58]
+      "Mục tiêu",
+      "13 sep 2021",
+      "Mục tiêu của cuộc sống là bị khuất phục trước những điều lớn lao và lớn lao hơn nữa",
+      "Rainer Maria Rilke",
+      "In three words I can sum up everything I’ve learned about life: it goes on"
     )),
   ];
-  _0x12d7x25[_0xccf2[21]]((_0x12d7x26) => {
-    var _0x12d7x27 = `${_0xccf2[59]}${_0x12d7x26[_0xccf2[40]]}${_0xccf2[60]}${
-      _0x12d7x26[_0xccf2[41]]
-    }${_0xccf2[61]}${_0x12d7x26[_0xccf2[42]]}${_0xccf2[62]}${
-      _0x12d7x26[_0xccf2[43]]
-    }${_0xccf2[63]}${_0x12d7x26[_0xccf2[44]]}${_0xccf2[64]}`;
-    _0x12d7x24[_0xccf2[7]] += _0x12d7x27;
+  arrayStory.forEach((story) => {
+    var htmlStory = `<div class="resume-content-text">
+  <h2 class="resume-heading">${story.head}</h2>
+  <span>${story.time}</span>
+  <p class="resume-text">
+  ${story.content}
+  </p>
+  <p class="resume-sub-text">"${story.author}"</p>
+  <div class="resume-stick2"></div>
+  <div class="resume-note">${story.name}</div>
+</div>`;
+    storyContainer.innerHTML += htmlStory;
   });
 }
+
 function avtChange() {
-  var _0x12d7x29 = document[_0xccf2[4]](_0xccf2[65]);
-  var _0x12d7x2a = [_0xccf2[66], _0xccf2[67], _0xccf2[68], _0xccf2[69]];
-  var _0x12d7xa = 0;
+  var avt = document.querySelector(".main-avt > img");
+  var arrayAvt = [
+    "./assets/imgs/image.jpg",
+    "./assets/imgs/image1.jpg",
+    "./assets/imgs/image2.jpg",
+    "./assets/imgs/image3.jpg",
+  ];
+  var i = 0;
   setInterval(() => {
-    if (_0x12d7xa < _0x12d7x2a[_0xccf2[70]]) {
-      _0x12d7x29[_0xccf2[72]](_0xccf2[71], _0x12d7x2a[_0x12d7xa]);
-      _0x12d7xa++;
-    } else {
-      _0x12d7xa = 0;
-    }
+    if (i < arrayAvt.length) {
+      avt.setAttribute("src", arrayAvt[i]);
+      i++;
+    } else i = 0;
   }, 3000);
 }
+/* roman: "./assets/audio/roman.mp3",
+lemontree: "./assets/audio/lemontree.mp3", */
+/* audio */
 function audio() {
-  var _0x12d7x2c = document[_0xccf2[4]](_0xccf2[73]);
+  var playlists = document.querySelector(".play-lists-items");
   class musicList {
-    _0x12d7x1e(_0x12d7x23, _0x12d7x2d, _0x12d7x22, _0x12d7x2e) {
-      (this[_0xccf2[44]] = _0x12d7x23),
-        (this[_0xccf2[74]] = _0x12d7x2d),
-        (this[_0xccf2[43]] = _0x12d7x22),
-        (this[_0xccf2[75]] = _0x12d7x2e);
+    constructor(name, url, author, img) {
+      (this.name = name),
+        (this.url = url),
+        (this.author = author),
+        (this.img = img);
     }
   }
-  var _0x12d7x2f = [_0xccf2[66], _0xccf2[67], _0xccf2[68], _0xccf2[69]];
-  var _0x12d7x30 = [
-    new musicList(_0xccf2[76], _0xccf2[77], _0xccf2[78], _0xccf2[66]),
-    new musicList(_0xccf2[79], _0xccf2[80], _0xccf2[78], _0xccf2[67]),
-    new musicList(_0xccf2[81], _0xccf2[82], _0xccf2[83], _0xccf2[66]),
-    new musicList(_0xccf2[84], _0xccf2[85], _0xccf2[86], _0xccf2[67]),
+  var arrayImgSong = [
+    "./assets/imgs/image.jpg",
+    "./assets/imgs/image1.jpg",
+    "./assets/imgs/image2.jpg",
+    "./assets/imgs/image3.jpg",
   ];
-  var _0x12d7x31 = document[_0xccf2[4]](_0xccf2[87]);
-  var _0x12d7x32 = document[_0xccf2[1]](_0xccf2[88]);
-  _0x12d7x30[_0xccf2[21]]((_0x12d7x33) => {
-    var _0x12d7x34 = `${_0xccf2[89]}${_0x12d7x33[_0xccf2[75]]}${_0xccf2[90]}${
-      _0x12d7x33[_0xccf2[44]]
-    }${_0xccf2[91]}${_0x12d7x33[_0xccf2[43]]}${_0xccf2[92]}`;
-    _0x12d7x2c[_0xccf2[7]] += _0x12d7x34;
-    var _0x12d7x35 = document[_0xccf2[4]](_0xccf2[93]);
-    var _0x12d7x36 = document[_0xccf2[4]](_0xccf2[94]);
-    var _0x12d7x37 = document[_0xccf2[4]](_0xccf2[95]);
-    var _0x12d7x38 = document[_0xccf2[1]](_0xccf2[96]);
-    _0x12d7x36[_0xccf2[26]](_0xccf2[22], () => {
-      _0x12d7x35[_0xccf2[72]](_0xccf2[71], _0x12d7x30[0][_0xccf2[74]]);
-      _0x12d7x31[_0xccf2[32]] = _0x12d7x30[0][_0xccf2[44]];
-      _0x12d7x35[_0xccf2[97]]();
-      _0x12d7x36[_0xccf2[17]][_0xccf2[16]] = _0xccf2[18];
-      _0x12d7x37[_0xccf2[17]][_0xccf2[16]] = _0xccf2[98];
+  var listSong = [
+    new musicList(
+      "roman",
+      "./assets/audio/roman.mp3",
+      "dung",
+      "./assets/imgs/image.jpg"
+    ),
+    new musicList(
+      "lemon tree",
+      "./assets/audio/lemontree.mp3",
+      "dung",
+      "./assets/imgs/image1.jpg"
+    ),
+    new musicList(
+      "Yêu xa",
+      "./assets/audio/yeuxa.mp3",
+      "Quang Trung",
+      "./assets/imgs/image.jpg"
+    ),
+    new musicList(
+      "Hẹn một mai",
+      "./assets/audio/henmotmai.mp3",
+      "Bùi Anh Tuấn",
+      "./assets/imgs/image1.jpg"
+    ),
+  ];
+
+  var songName = document.querySelector(".song-play-name");
+  var imgRote = document.querySelectorAll(".play-list-img");
+
+  listSong.forEach((song) => {
+    var playlistsHtml = `
+  <li class="play-list-item">
+    <div class="play-list-img">
+      <img src="${song.img}" alt="">
+    </div>
+    <div class="play-list-title">
+      <h2 class="song-name"> ${song.name} </h2>
+      <div class="sub-song-name">
+        <span> ${song.author} </span>
+        <span>Time</span>
+      </div>
+    </div>
+  </li>`;
+    playlists.innerHTML += playlistsHtml;
+    var audios = document.querySelector(".play-audio > audio");
+    var play = document.querySelector(".start");
+    var pause = document.querySelector(".pause--icon");
+    var listBtns = document.querySelectorAll(".play-list-item");
+
+    play.addEventListener("click", () => {
+      audios.setAttribute("src", listSong[0].url);
+      songName.innerText = listSong[0].name;
+      audios.play();
+
+      play.style.display = "none";
+      pause.style.display = "inline";
     });
-    _0x12d7x37[_0xccf2[26]](_0xccf2[22], () => {
-      _0x12d7x35[_0xccf2[99]]();
+    pause.addEventListener("click", () => {
+      audios.pause();
       removeMusicRote();
-      _0x12d7x37[_0xccf2[17]][_0xccf2[16]] = _0xccf2[18];
-      _0x12d7x36[_0xccf2[17]][_0xccf2[16]] = _0xccf2[98];
+      pause.style.display = "none";
+      play.style.display = "inline";
     });
-    _0x12d7x38[_0xccf2[21]]((_0x12d7x8, _0x12d7x14) => {
-      _0x12d7x8[_0xccf2[26]](_0xccf2[22], () => {
-        _0x12d7x35[_0xccf2[72]](
-          _0xccf2[71],
-          _0x12d7x30[_0x12d7x14][_0xccf2[74]]
-        );
-        _0x12d7x35[_0xccf2[97]]();
-        _0x12d7x36[_0xccf2[17]][_0xccf2[16]] = _0xccf2[18];
-        _0x12d7x37[_0xccf2[17]][_0xccf2[16]] = _0xccf2[98];
-        _0x12d7x31[_0xccf2[32]] = _0x12d7x30[_0x12d7x14][_0xccf2[44]];
+    listBtns.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        audios.setAttribute("src", listSong[index].url);
+        audios.play();
+        play.style.display = "none";
+        pause.style.display = "inline";
+        songName.innerText = listSong[index].name;
         removeMusicRote();
-        _0x12d7x8[_0xccf2[4]](_0xccf2[88])[_0xccf2[15]][_0xccf2[14]](
-          _0xccf2[100]
-        );
-        _0x12d7x8[_0xccf2[15]][_0xccf2[14]](_0xccf2[101]);
+        btn.querySelector(".play-list-img").classList.add("music--rote");
+        btn.classList.add("song--hover");
       });
     });
   });
 }
+
 function removeMusicRote() {
-  var _0x12d7x3a = document[_0xccf2[1]](_0xccf2[96]);
-  var _0x12d7x32 = document[_0xccf2[1]](_0xccf2[88]);
-  _0x12d7x32[_0xccf2[21]]((_0x12d7x2e) => {
-    _0x12d7x2e[_0xccf2[15]][_0xccf2[20]](_0xccf2[100]);
+  var playList = document.querySelectorAll(".play-list-item");
+  var imgRote = document.querySelectorAll(".play-list-img");
+  imgRote.forEach((img) => {
+    img.classList.remove("music--rote");
   });
-  _0x12d7x3a[_0xccf2[21]]((_0x12d7x36) => {
-    _0x12d7x36[_0xccf2[15]][_0xccf2[20]](_0xccf2[101]);
+  playList.forEach((play) => {
+    play.classList.remove("song--hover");
   });
 }
 myInfo();
 function myInfo() {
-  var _0x12d7x3c = document[_0xccf2[4]](_0xccf2[102]);
+  var container = document.querySelector(".js--info");
   class contents {
-    _0x12d7x1e(_0x12d7x1f, _0x12d7x3d, _0x12d7x21) {
-      (this[_0xccf2[40]] = _0x12d7x1f),
-        (this[_0xccf2[103]] = _0x12d7x3d),
-        (this[_0xccf2[42]] = _0x12d7x21);
+    constructor(head, header, content) {
+      (this.head = head), (this.header = header), (this.content = content);
     }
   }
-  var _0x12d7x3e = [
-    (content1 = new contents(_0xccf2[104], _0xccf2[44], _0xccf2[105])),
-    (content2 = new contents(_0xccf2[106], _0xccf2[44], _0xccf2[105])),
-    (content3 = new contents(_0xccf2[107], _0xccf2[44], _0xccf2[105])),
+  var arrayContent = [
+    (content1 = new contents("A littel about me", "name", "le the dung abcs")),
+    (content2 = new contents("favorite", "name", "le the dung abcs")),
+    (content3 = new contents("crush", "name", "le the dung abcs")),
   ];
-  _0x12d7x3e[_0xccf2[21]]((_0x12d7x21, _0x12d7x14) => {
-    _0x12d7x3c[_0xccf2[7]] += `${_0xccf2[108]}${
-      _0x12d7x3e[_0x12d7x14][_0xccf2[40]]
-    }${_0xccf2[109]}${_0x12d7x3e[_0x12d7x14][_0xccf2[103]]}${_0xccf2[110]}${
-      _0x12d7x3e[_0x12d7x14][_0xccf2[42]]
-    }${_0xccf2[111]}`;
+
+  arrayContent.forEach((content, index) => {
+    container.innerHTML += ` <div class="main-heading">
+    <p class="main-heading-text">
+      <i class="far fa-id-badge text--icon"></i> ${arrayContent[index].head}
+    </p>
+  </div>
+  <div class="resume-content">
+    <div class="resume-content-text">
+      <h2 class="resume-heading">${arrayContent[index].header}</h2>
+      <span>13 sep 2021</span>
+      <p class="resume-text">
+        ${arrayContent[index].content}
+      </p>
+      <p class="resume-sub-text">"Made by lethedung"</p>
+      <div class="resume-stick2"></div>
+      <div class="resume-note">You scratch my back and I’ll scratch yours</div>
+    </div>
+  </div>`;
   });
 }
+
+/* var html = ` <div class="main-heading">
+  <p class="main-heading-text">
+    <i class="far fa-id-badge text--icon"></i> A little about me
+  </p>
+</div>
+<div class="resume-content">
+  <div class="resume-content-text">
+    <h2 class="resume-heading">coming soon</h2>
+    <span>13 sep 2021</span>
+    <p class="resume-text">
+      coming soon
+    </p>
+    <p class="resume-sub-text">"Made by lethedung"</p>
+    <div class="resume-stick2"></div>
+    <div class="resume-note">You scratch my back and I’ll scratch yours</div>
+  </div>
+</div>` */
