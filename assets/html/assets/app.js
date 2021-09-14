@@ -10,6 +10,7 @@ var homeContent = document.querySelector(".home-content");
 var homeImg = document.querySelector(".home-img");
 var moreContent = document.querySelectorAll(".more-content");
 var resume = document.querySelector(".resume");
+var homeMail = document.querySelector(".home-mail");
 console.log("hello");
 /* main */
 function start() {
@@ -88,6 +89,7 @@ function removeHome() {
   homeImg.classList.add("opc-hidden");
   homeContent.classList.add("opc-hidden");
   textHomeHeading.classList.add("opc-hidden");
+  homeMail.classList.add("opc-hidden");
   setTimeout(() => {
     home.style.display = "none";
     skillNumber();
@@ -105,6 +107,7 @@ function homeEfect() {
   homeImg.classList.remove("opc-hidden");
   homeContent.classList.remove("opc-hidden");
   textHomeHeading.classList.remove("opc-hidden");
+  homeMail.classList.remove("opc-hidden");
 }
 
 window.onload = () => {
