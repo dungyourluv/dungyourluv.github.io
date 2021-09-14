@@ -124,6 +124,7 @@ a {
   flex-direction: column;
   height: 140px;
   background-color: #fff;
+  z-index: 2;
 }
 .add--more {
   line-height: 60px;
@@ -295,4 +296,100 @@ home > * {
 /* resume */
 .resume {
   color: #fff;
+}
+
+/* playlists */
+
+.play-container {
+  margin: 10px;
+  flex-direction: column;
+  color: rgb(255, 240, 240);
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(241, 189, 218);
+  min-height: 100px;
+  border-radius: 8px;
+}
+.play--icon,
+.pause--icon {
+  margin: 8px 40px;
+  color: rgb(236, 102, 124);
+}
+.play-controls {
+  font-size: 30px;
+}
+
+.pause--icon {
+  display: none;
+}
+
+.play-header {
+  font-weight: bold;
+}
+
+.play-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.play-list-container {
+  background-color: rgb(241, 189, 218);
+  display: flex;
+  padding: 16px;
+  border-radius: 10px;
+  margin: 6px 0;
+}
+
+.play-list-container:hover {
+  background-color: rgb(192, 154, 175);
+}
+.play--hover {
+  background-color: rgb(192, 154, 175);
+}
+.list-img {
+  width: 30%;
+}
+
+.list-img > img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.list-info {
+  width: 70%;
+  margin-left: 10px;
+}
+.list-info > span {
+  margin-left: 8px;
+}
+
+.play-slider {
+  margin: 0 auto;
+  width: 90%;
+  height: 5px;
+  position: relative;
+
+  background-color: #fff;
+}
+
+.play-color {
+  background-color: red;
+  width: 50%;
+  height: 100%;
+}
+
+.play-slider::after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 50%;
+  top: -5px;
+  border-radius: 50%;
+  background-color: red;
 }
