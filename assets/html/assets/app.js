@@ -1,248 +1,200 @@
-var headerBtns = document.querySelectorAll(".header-logo");
-var more = document.querySelector(".header-more");
-var home = document.querySelector(".home");
-var skill = document.querySelector(".skills");
-var skillTab = document.querySelectorAll(".skill");
-var numberSkill = document.querySelectorAll(".skill-number");
-var skillContent = document.querySelector(".skills-content");
-var textHomeHeading = document.querySelector(".home-heading");
-var homeContent = document.querySelector(".home-content");
-var homeImg = document.querySelector(".home-img");
-var moreContent = document.querySelector(".more-content");
-var resume = document.querySelector(".resume");
-var homeMail = document.querySelector(".home-mail");
-var playlists = document.querySelector(".playlists");
-var moreChoose = document.querySelectorAll(".add--more");
-var playIcon = document.querySelector(".start");
-var pauseIcon = document.querySelector(".pause--icon");
-var audioContainer = document.querySelector(".audio-container");
-var listMusics = document.querySelector(".play-list");
-console.log("hello");
-/* main */
-function start() {
-  headerMore();
-}
-start();
-function headerMore() {
-  headerBtns.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      removeEfHeader();
-      btn.classList.toggle("header--active");
-      if (index == 2) {
-        openMore();
-      }
-      if (index == 1) {
-        skills();
-      }
-      if (index == 0) {
-        Home();
-      }
-    });
-  });
-}
-
-function openMore() {
-  more.classList.toggle("active");
-  moreBtn();
-}
-function removeEfHeader() {
-  headerBtns.forEach((header) => {
-    header.classList.remove("header--active");
-  });
-}
-function skills() {
-  removeHome();
-  removeResume();
-  removePlayList();
-  skill.classList.remove("opc-hidden");
-  setTimeout(() => {
-    skill.style.display = "block";
-    skillNumber();
-  }, 200);
-}
-
-function Home() {
-  home.classList.remove("opc-hidden");
-  homeEfect();
-  removeSkill();
-  removeResume();
-  setTimeout(() => {
-    home.style.display = "block";
-  }, 200);
-  removePlayList();
-}
-
-function resumeOn() {
-  resume.classList.remove("opc-hidden");
-}
-
-function removeResume() {
-  resume.classList.add("opc-hidden");
-}
-
-function skillNumber() {
-  var array = [];
-  numberSkill.forEach((number, index) => {
-    array.push(number.getAttribute("data-number"));
-    number.innerText = array[index];
-  });
-  skillTab.forEach((skill, index) => {
-    skill.style.width = array[index];
-  });
-}
-
-function removeHome() {
-  home.classList.add("opc-hidden");
-  homeImg.classList.add("opc-hidden");
-  homeContent.classList.add("opc-hidden");
-  textHomeHeading.classList.add("opc-hidden");
-  homeMail.classList.add("opc-hidden");
-  setTimeout(() => {
-    home.style.display = "none";
-    skillNumber();
-  }, 200);
-}
-function removeSkill() {
-  skill.classList.add("opc-hidden");
-  setTimeout(() => {
-    skill.style.display = "none";
-    skillNumber();
-  }, 200);
-}
-
-function homeEfect() {
-  homeImg.classList.remove("opc-hidden");
-  homeContent.classList.remove("opc-hidden");
-  textHomeHeading.classList.remove("opc-hidden");
-  homeMail.classList.remove("opc-hidden");
-}
-
-window.onload = () => {
-  homeEfect();
-};
-
-function moreBtn() {
-  moreChoose.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      removeHome();
-      removeEfHeader();
-      removeSkill();
-      if (index == 0) {
-        removePlayList();
-        resumeOn();
-      }
-      if (index == 1) {
-        playlistOn();
-      }
-    });
-  });
-}
-
-function playlistOn() {
-  playlists.classList.remove("opc-hidden");
-  resume.classList.add("opc-hidden");
-  addListMusic();
-}
-
-function removePlayList() {
-  playlists.classList.add("opc-hidden");
-}
-
-function controlPlays(song) {
-  playIcon.addEventListener("click", () => {
-    playIcon.style.display = "none";
-    pauseIcon.style.display = "initial";
-    song.play();
-  });
-  pauseIcon.addEventListener("click", () => {
-    pauseIcon.style.display = "none";
-    playIcon.style.display = "initial";
-    song.pause();
-  });
-}
-
-/* list music */
-class Music {
-  constructor(name, img, url, author) {
-    (this.name = name),
-      (this.img = img),
-      (this.url = url),
-      (this.author = author);
-  }
-}
-var MusicList = [
-  new Music(
-    "Yêu xa",
-    "./assets/imgs/image.jpg",
-    "./assets/audio/yeuxa.mp3",
-    "Vũ Cát Tường"
-  ),
-  new Music(
-    "Hẹn Một Mai",
-    "./assets/imgs/image1.jpg",
-    "./assets/audio/henmotmai.mp3",
-    "Vũ Cát Tường"
-  ),
-  new Music(
-    "Lemon tree",
-    "./assets/imgs/image.jpg",
-    "./assets/audio/lemontree.mp3",
-    "Vũ Cát Tường"
-  ),
+var songList = document.querySelector(".play-list-song");
+var audio = document.querySelector(".audio");
+var playButton = document.querySelector(".play--play");
+var nextButton = document.querySelector(".play--next");
+var backButton = document.querySelector(".play--back");
+var pauseButton = document.querySelector(".play--pause");
+var mainImgSong = document.querySelector(".play-img");
+var mainNameSong = document.querySelector(".play-info > span");
+var mainTimeSong = document.querySelector(".play-info > p");
+var slider = document.querySelector(".slider");
+var songPlay = 0;
+var listSong = [
+  {
+    nameSong: "bỏ em vào balo",
+    author: "tân trần",
+    link: "./assets/audio/boemvaobalo.mp3",
+    img: "./assets/imgs/image1.jpg",
+  },
+  {
+    nameSong: "yêu xa",
+    author: "vũ cát tường",
+    link: "./assets/audio/yeuxa.mp3",
+    img: "./assets/imgs/image.jpg",
+  },
+  {
+    nameSong: "chiều nay không có mưa bay",
+    author: "trung quân idol",
+    link: "./assets/audio/chieunaykhongcomuabay.mp3",
+    img: "./assets/imgs/image1.jpg",
+  },
+  {
+    nameSong: "hạ còn vương nắng",
+    author: "datkaa x kido x prod",
+    link: "./assets/audio/haconvuongnang.mp3",
+    img: "./assets/imgs/image.jpg",
+  },
 ];
-function addListMusic() {
-  MusicList.forEach((music, index) => {
-    audioContainer.innerHTML += `<audio src=" ${music.url} " data-number="${index}"></audio>`;
-    listMusics.innerHTML += ` <div class="play-list-container">
-     <div class="list-img">
-       <img src="${music.img}" alt="">
-     </div>
-     <div class="list-info">
-       <h1 class="song-name">${music.name}</h1>
-       <span>${music.author}</span>
-     </div>`;
+
+/* background-image: url(./imgs/image.jpg); */
+/* khoi chay function */
+function songStart() {
+  renderListSong();
+  eventPlay();
+}
+songStart();
+/* render song */
+function renderListSong() {
+  var newListSong = listSong.map((song) => {
+    return `<div class="song">
+    <div class="song-avt"></div>
+    <div class="song-info">
+      <h1>${song.nameSong}</h1>
+      <span>${song.author}</span>
+    </div>
+  </div>`;
   });
-  var songItem = document.querySelectorAll(".play-list-container");
-  var song = document.querySelectorAll(".audio-container > audio");
-  var header = document.querySelector(".play-header > p");
-  var nextSong = document.querySelector(".next--song");
-  var backSong = document.querySelector(".back--song");
+  songList.innerHTML = newListSong.join("");
+  /* var lan 2 */
+  var imgSong = document.querySelectorAll(".song-avt");
+  var song = document.querySelectorAll(".song");
+  listSong.forEach((img, index) => {
+    imgSong[index].style.backgroundImage = `url(${img.img})`;
+  });
+  /* set deful main song */
+  audio.src = listSong[0].link;
+  mainImgSong.style.backgroundImage = `url(${listSong[0].img})`;
+  mainNameSong.innerText = listSong[0].nameSong;
+  song[0].classList.add("active--song");
+  chooseMusic(song, listSong, audio);
+  nextSong(song, listSong, audio);
+  moveSlider();
+}
+/* disk animation */
+var keyFrame = [
+  {
+    transform: "rotate(360deg)",
+  },
+];
+var animateSong = mainImgSong.animate(keyFrame, {
+  duration: 10000, //10 second,
+  iterations: Infinity,
+});
+animateSong.pause();
+/* tinh thoi gian cua slider */
 
-  function NextBackSong(next, back) {
-    var indexNext = next;
-    var indexBack = back;
-    nextSong.addEventListener("click", () => {
-      if (next < songItem.length) {
-        musicInListPlay();
-      }
-    });
-
-    backSong.addEventListener("click", () => {});
+function sliderTime() {
+  var sumTime = audio.duration;
+  var presentTime = audio.currentTime;
+  var progress = Math.floor((presentTime / sumTime) * 100);
+  slider.value = progress;
+  if (slider.value == 100) {
+    playBtnChange(false);
   }
+}
+/* Tua bài  */
 
-  function musicInListPlay() {
-    songItem.forEach((btn, index) => {
-      btn.addEventListener("click", () => {
-        NextBackSong(index + 1, index - 1);
-        let nameSong = btn.querySelector(".song-name").innerText;
-        header.innerText = nameSong;
-        playMusic(index);
+function moveSlider() {
+  slider.onchange = function () {
+    var seekTime = (slider.value * audio.duration) / 100;
+    audio.currentTime = seekTime;
+  };
+}
+
+/* slider run */
+function sliderRun() {
+  audio.ontimeupdate = function () {
+    sliderTime();
+  };
+}
+
+/* playBtn change */
+
+function playBtnChange(isPlay) {
+  if (isPlay) {
+    playButton.style.display = "none";
+    pauseButton.style.display = "initial";
+  } else {
+    pauseButton.style.display = "none";
+    playButton.style.display = "initial";
+  }
+}
+/* main Music change */
+function nameImgChange(index) {
+  mainImgSong.style.backgroundImage = `url(${listSong[index].img})`;
+  mainNameSong.innerText = listSong[index].nameSong;
+}
+/* listen event play */
+
+function eventPlay() {
+  /* play audio */
+  var isPlaying = false;
+  playButton.onclick = function () {
+    audio.play();
+    isPlaying = true;
+    playBtnChange(isPlaying);
+    sliderRun();
+    animateSong.play();
+  };
+  pauseButton.onclick = function () {
+    audio.pause();
+    isPlaying = false;
+    playBtnChange(isPlaying);
+    animateSong.pause();
+  };
+}
+/* choose music */
+function chooseMusic(song, listSong, audio) {
+  song.forEach((sog, index) => {
+    sog.onclick = function () {
+      song.forEach((remove) => {
+        remove.classList.remove("active--song");
       });
-    });
-  }
-  musicInListPlay();
-  function playMusic(i) {
-    songItem.forEach((a) => {
-      a.classList.remove("play--hover");
-    });
-    song.forEach((s) => {
-      s.pause();
-    });
-    song[i].play();
-    controlPlays(song[i]);
+      sog.classList.add("active--song");
+      var link = listSong[index].link;
+      audio.src = link;
+      audio.play();
+      playBtnChange(true);
+      nameImgChange(index);
+      animateSong.play();
+      songPlay = index;
+    };
+  });
+}
 
-    songItem[i].classList.add("play--hover");
-    playIcon.style.display = "none";
-    pauseIcon.style.display = "initial";
-  }
+/* next song */
+
+function nextSong(song, listSong, audio) {
+  nextButton.onclick = function () {
+    if (songPlay < song.length - 1) {
+      songPlay++;
+    } else songPlay = 0;
+    var link = listSong[songPlay].link;
+    audio.src = link;
+    audio.play();
+    animateSong.play();
+    playBtnChange(true);
+    nameImgChange(songPlay);
+    song.forEach((sogRemove) => {
+      sogRemove.classList.remove("active--song");
+    });
+    song[songPlay].classList.add("active--song");
+  };
+  backButton.onclick = function () {
+    /* code bị lặp lại fix sau */
+    if (songPlay > 0 && songPlay <= song.length - 1) {
+      songPlay--;
+    } else return;
+    console.log(songPlay);
+    var link = listSong[songPlay].link;
+    audio.src = link;
+    audio.play();
+    playBtnChange(true);
+    nameImgChange(songPlay);
+    animateSong.play();
+    song.forEach((sogRemove) => {
+      sogRemove.classList.remove("active--song");
+    });
+    song[songPlay].classList.add("active--song");
+  };
 }
