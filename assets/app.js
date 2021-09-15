@@ -11,7 +11,6 @@ function start() {
   avtChange();
   /* click();
    */
-  audio();
 }
 start();
 
@@ -187,161 +186,205 @@ function avtChange() {
 }
 /* roman: "./assets/audio/roman.mp3",
 lemontree: "./assets/audio/lemontree.mp3", */
-/* audio */
-function audio() {
-  var playlists = document.querySelector(".play-lists-items");
-  class musicList {
-    constructor(name, url, author, img) {
-      (this.name = name),
-        (this.url = url),
-        (this.author = author),
-        (this.img = img);
-    }
-  }
-  var arrayImgSong = [
-    "./assets/imgs/image.jpg",
-    "./assets/imgs/image1.jpg",
-    "./assets/imgs/image2.jpg",
-    "./assets/imgs/image3.jpg",
-  ];
-  var listSong = [
-    new musicList(
-      "roman",
-      "./assets/audio/roman.mp3",
-      "dung",
-      "./assets/imgs/image.jpg"
-    ),
-    new musicList(
-      "lemon tree",
-      "./assets/audio/lemontree.mp3",
-      "dung",
-      "./assets/imgs/image1.jpg"
-    ),
-    new musicList(
-      "Yêu xa",
-      "./assets/audio/yeuxa.mp3",
-      "Quang Trung",
-      "./assets/imgs/image.jpg"
-    ),
-    new musicList(
-      "Hẹn một mai",
-      "./assets/audio/henmotmai.mp3",
-      "Bùi Anh Tuấn",
-      "./assets/imgs/image1.jpg"
-    ),
-  ];
 
-  var songName = document.querySelector(".song-play-name");
-  var imgRote = document.querySelectorAll(".play-list-img");
+/* playlist */
+var songList = document.querySelector(".play-list-song");
+var audio = document.querySelector(".audio");
+var playButton = document.querySelector(".play--play");
+var nextButton = document.querySelector(".play--next");
+var backButton = document.querySelector(".play--back");
+var pauseButton = document.querySelector(".play--pause");
+var mainImgSong = document.querySelector(".play-img");
+var mainNameSong = document.querySelector(".play-info > span");
+var mainTimeSong = document.querySelector(".play-info > p");
+var slider = document.querySelector(".slider");
+var songPlay = 0;
+var listSong = [
+  {
+    nameSong: "bỏ em vào balo",
+    author: "tân trần",
+    link: "./assets/audio/boemvaobalo.mp3",
+    img: "./assets/imgs/image1.jpg",
+  },
+  {
+    nameSong: "yêu xa",
+    author: "vũ cát tường",
+    link: "./assets/audio/yeuxa.mp3",
+    img: "./assets/imgs/image.jpg",
+  },
+  {
+    nameSong: "chiều nay không có mưa bay",
+    author: "trung quân idol",
+    link: "./assets/audio/chieunaykhongcomuabay.mp3",
+    img: "./assets/imgs/image1.jpg",
+  },
+  {
+    nameSong: "hạ còn vương nắng",
+    author: "datkaa x kido x prod",
+    link: "./assets/audio/haconvuongnang.mp3",
+    img: "./assets/imgs/image.jpg",
+  },
+];
 
-  listSong.forEach((song) => {
-    var playlistsHtml = `
-  <li class="play-list-item">
-    <div class="play-list-img">
-      <img src="${song.img}" alt="">
-    </div>
-    <div class="play-list-title">
-      <h2 class="song-name"> ${song.name} </h2>
-      <div class="sub-song-name">
-        <span> ${song.author} </span>
-        <span>Time</span>
-      </div>
-    </div>
-  </li>`;
-    playlists.innerHTML += playlistsHtml;
-    var audios = document.querySelector(".play-audio > audio");
-    var play = document.querySelector(".start");
-    var pause = document.querySelector(".pause--icon");
-    var listBtns = document.querySelectorAll(".play-list-item");
-
-    play.addEventListener("click", () => {
-      audios.setAttribute("src", listSong[0].url);
-      songName.innerText = listSong[0].name;
-      audios.play();
-
-      play.style.display = "none";
-      pause.style.display = "inline";
-    });
-    pause.addEventListener("click", () => {
-      audios.pause();
-      removeMusicRote();
-      pause.style.display = "none";
-      play.style.display = "inline";
-    });
-    listBtns.forEach((btn, index) => {
-      btn.addEventListener("click", () => {
-        audios.setAttribute("src", listSong[index].url);
-        audios.play();
-        play.style.display = "none";
-        pause.style.display = "inline";
-        songName.innerText = listSong[index].name;
-        removeMusicRote();
-        btn.querySelector(".play-list-img").classList.add("music--rote");
-        btn.classList.add("song--hover");
-      });
-    });
-  });
+/* background-image: url(./imgs/image.jpg); */
+/* khoi chay function */
+function songStart() {
+  renderListSong();
+  eventPlay();
 }
-
-function removeMusicRote() {
-  var playList = document.querySelectorAll(".play-list-item");
-  var imgRote = document.querySelectorAll(".play-list-img");
-  imgRote.forEach((img) => {
-    img.classList.remove("music--rote");
-  });
-  playList.forEach((play) => {
-    play.classList.remove("song--hover");
-  });
-}
-myInfo();
-function myInfo() {
-  var container = document.querySelector(".js--info");
-  class contents {
-    constructor(head, header, content) {
-      (this.head = head), (this.header = header), (this.content = content);
-    }
-  }
-  var arrayContent = [
-    (content1 = new contents("A littel about me", "name", "le the dung abcs")),
-    (content2 = new contents("favorite", "name", "le the dung abcs")),
-    (content3 = new contents("crush", "name", "le the dung abcs")),
-  ];
-
-  arrayContent.forEach((content, index) => {
-    container.innerHTML += ` <div class="main-heading">
-    <p class="main-heading-text">
-      <i class="far fa-id-badge text--icon"></i> ${arrayContent[index].head}
-    </p>
-  </div>
-  <div class="resume-content">
-    <div class="resume-content-text">
-      <h2 class="resume-heading">${arrayContent[index].header}</h2>
-      <span>13 sep 2021</span>
-      <p class="resume-text">
-        ${arrayContent[index].content}
-      </p>
-      <p class="resume-sub-text">"Made by lethedung"</p>
-      <div class="resume-stick2"></div>
-      <div class="resume-note">You scratch my back and I’ll scratch yours</div>
+songStart();
+/* render song */
+function renderListSong() {
+  var newListSong = listSong.map((song) => {
+    return `<div class="song">
+    <div class="song-avt"></div>
+    <div class="song-info">
+      <h1>${song.nameSong}</h1>
+      <span>${song.author}</span>
     </div>
   </div>`;
   });
+  songList.innerHTML = newListSong.join("");
+  /* var lan 2 */
+  var imgSong = document.querySelectorAll(".song-avt");
+  var song = document.querySelectorAll(".song");
+  listSong.forEach((img, index) => {
+    imgSong[index].style.backgroundImage = `url(${img.img})`;
+  });
+  /* set deful main song */
+  audio.src = listSong[0].link;
+  mainImgSong.style.backgroundImage = `url(${listSong[0].img})`;
+  mainNameSong.innerText = listSong[0].nameSong;
+  song[0].classList.add("active--song");
+  chooseMusic(song, listSong, audio);
+  nextSong(song, listSong, audio);
+  moveSlider();
+}
+/* disk animation */
+var keyFrame = [
+  {
+    transform: "rotate(360deg)",
+  },
+];
+var animateSong = mainImgSong.animate(keyFrame, {
+  duration: 10000, //10 second,
+  iterations: Infinity,
+});
+animateSong.pause();
+/* tinh thoi gian cua slider */
+
+function sliderTime() {
+  var sumTime = audio.duration;
+  var presentTime = audio.currentTime;
+  var progress = Math.floor((presentTime / sumTime) * 100);
+  slider.value = progress;
+  if (slider.value == 100) {
+    playBtnChange(false);
+  }
+}
+/* Tua bài  */
+
+function moveSlider() {
+  slider.onchange = function () {
+    var seekTime = (slider.value * audio.duration) / 100;
+    audio.currentTime = seekTime;
+  };
 }
 
-/* var html = ` <div class="main-heading">
-  <p class="main-heading-text">
-    <i class="far fa-id-badge text--icon"></i> A little about me
-  </p>
-</div>
-<div class="resume-content">
-  <div class="resume-content-text">
-    <h2 class="resume-heading">coming soon</h2>
-    <span>13 sep 2021</span>
-    <p class="resume-text">
-      coming soon
-    </p>
-    <p class="resume-sub-text">"Made by lethedung"</p>
-    <div class="resume-stick2"></div>
-    <div class="resume-note">You scratch my back and I’ll scratch yours</div>
-  </div>
-</div>` */
+/* slider run */
+function sliderRun() {
+  audio.ontimeupdate = function () {
+    sliderTime();
+  };
+}
+
+/* playBtn change */
+
+function playBtnChange(isPlay) {
+  if (isPlay) {
+    playButton.style.display = "none";
+    pauseButton.style.display = "initial";
+  } else {
+    pauseButton.style.display = "none";
+    playButton.style.display = "initial";
+  }
+}
+/* main Music change */
+function nameImgChange(index) {
+  mainImgSong.style.backgroundImage = `url(${listSong[index].img})`;
+  mainNameSong.innerText = listSong[index].nameSong;
+}
+/* listen event play */
+
+function eventPlay() {
+  /* play audio */
+  var isPlaying = false;
+  playButton.onclick = function () {
+    audio.play();
+    isPlaying = true;
+    playBtnChange(isPlaying);
+    sliderRun();
+    animateSong.play();
+  };
+  pauseButton.onclick = function () {
+    audio.pause();
+    isPlaying = false;
+    playBtnChange(isPlaying);
+    animateSong.pause();
+  };
+}
+/* choose music */
+function chooseMusic(song, listSong, audio) {
+  song.forEach((sog, index) => {
+    sog.onclick = function () {
+      song.forEach((remove) => {
+        remove.classList.remove("active--song");
+      });
+      sog.classList.add("active--song");
+      var link = listSong[index].link;
+      audio.src = link;
+      audio.play();
+      playBtnChange(true);
+      nameImgChange(index);
+      animateSong.play();
+      songPlay = index;
+    };
+  });
+}
+
+/* next song */
+
+function nextSong(song, listSong, audio) {
+  nextButton.onclick = function () {
+    if (songPlay < song.length - 1) {
+      songPlay++;
+    } else songPlay = 0;
+    var link = listSong[songPlay].link;
+    audio.src = link;
+    audio.play();
+    animateSong.play();
+    playBtnChange(true);
+    nameImgChange(songPlay);
+    song.forEach((sogRemove) => {
+      sogRemove.classList.remove("active--song");
+    });
+    song[songPlay].classList.add("active--song");
+  };
+  backButton.onclick = function () {
+    /* code bị lặp lại fix sau */
+    if (songPlay > 0 && songPlay <= song.length - 1) {
+      songPlay--;
+    } else return;
+    console.log(songPlay);
+    var link = listSong[songPlay].link;
+    audio.src = link;
+    audio.play();
+    playBtnChange(true);
+    nameImgChange(songPlay);
+    animateSong.play();
+    song.forEach((sogRemove) => {
+      sogRemove.classList.remove("active--song");
+    });
+    song[songPlay].classList.add("active--song");
+  };
+}
