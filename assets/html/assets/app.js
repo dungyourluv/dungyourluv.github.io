@@ -1,200 +1,206 @@
-var songList = document.querySelector(".play-list-song");
-var audio = document.querySelector(".audio");
-var playButton = document.querySelector(".play--play");
-var nextButton = document.querySelector(".play--next");
-var backButton = document.querySelector(".play--back");
-var pauseButton = document.querySelector(".play--pause");
-var mainImgSong = document.querySelector(".play-img");
-var mainNameSong = document.querySelector(".play-info > span");
-var mainTimeSong = document.querySelector(".play-info > p");
-var slider = document.querySelector(".slider");
-var songPlay = 0;
-var listSong = [
-  {
-    nameSong: "bỏ em vào balo",
-    author: "tân trần",
-    link: "./assets/audio/boemvaobalo.mp3",
-    img: "./assets/imgs/image1.jpg",
-  },
-  {
-    nameSong: "yêu xa",
-    author: "vũ cát tường",
-    link: "./assets/audio/yeuxa.mp3",
-    img: "./assets/imgs/image.jpg",
-  },
-  {
-    nameSong: "chiều nay không có mưa bay",
-    author: "trung quân idol",
-    link: "./assets/audio/chieunaykhongcomuabay.mp3",
-    img: "./assets/imgs/image1.jpg",
-  },
-  {
-    nameSong: "hạ còn vương nắng",
-    author: "datkaa x kido x prod",
-    link: "./assets/audio/haconvuongnang.mp3",
-    img: "./assets/imgs/image.jpg",
-  },
-];
+var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
+/* get header */
+var homeIcon = $(".icon--home");
+var navHome = $(".header-nav");
+/* get home */
+var mainHome = $(".home-info");
+var nameHome = $(".name");
+var subNameHome = $(".sub-name");
+var tagHome = $(".home-tag");
+var home = $(".home");
+/* get social */
+var contentSocial = $(".user-social");
+/* get user */
+var userIcon = $(".icon--user");
+var user = $(".user");
+/* get music */
+var musicIcon = $('.icon--music');
+var music = $('.music')
+/* get news */
+var newsIcon = $('.icon--more')
+var news = $('.news')
+var newsContents = $('.news-content')
 
-/* background-image: url(./imgs/image.jpg); */
-/* khoi chay function */
-function songStart() {
-  renderListSong();
-  eventPlay();
-}
-songStart();
-/* render song */
-function renderListSong() {
-  var newListSong = listSong.map((song) => {
-    return `<div class="song">
-    <div class="song-avt"></div>
-    <div class="song-info">
-      <h1>${song.nameSong}</h1>
-      <span>${song.author}</span>
-    </div>
-  </div>`;
-  });
-  songList.innerHTML = newListSong.join("");
-  /* var lan 2 */
-  var imgSong = document.querySelectorAll(".song-avt");
-  var song = document.querySelectorAll(".song");
-  listSong.forEach((img, index) => {
-    imgSong[index].style.backgroundImage = `url(${img.img})`;
-  });
-  /* set deful main song */
-  audio.src = listSong[0].link;
-  mainImgSong.style.backgroundImage = `url(${listSong[0].img})`;
-  mainNameSong.innerText = listSong[0].nameSong;
-  song[0].classList.add("active--song");
-  chooseMusic(song, listSong, audio);
-  nextSong(song, listSong, audio);
-  moveSlider();
-}
-/* disk animation */
-var keyFrame = [
-  {
-    transform: "rotate(360deg)",
-  },
-];
-var animateSong = mainImgSong.animate(keyFrame, {
-  duration: 10000, //10 second,
-  iterations: Infinity,
-});
-animateSong.pause();
-/* tinh thoi gian cua slider */
 
-function sliderTime() {
-  var sumTime = audio.duration;
-  var presentTime = audio.currentTime;
-  var progress = Math.floor((presentTime / sumTime) * 100);
-  slider.value = progress;
-  if (slider.value == 100) {
-    playBtnChange(false);
+
+/* ham chay */
+function start() {
+  headerEvent();
+  homeRender();
+  socialRender();
+  newsRender()
+}
+start();
+
+/* xu ly su kien header */
+isClick = false;
+function homeShow() {//home show
+  home.classList.remove("hidden");
+  home.classList.add("active");
+}
+function homeHidden() {//home hidden
+  home.classList.add("hidden");
+  home.classList.remove("active");
+}
+function headerEvent() {
+  //nav 
+  function navHidden() {
+    navHome.classList.add("hidden");
+    navHome.classList.remove("header-nav--active");
+    isClick = false;
+  }
+  function navShow() {
+    navHome.classList.remove("hidden");
+      navHome.classList.add("header-nav--active");
+      isClick = true;
+  }
+  //home click
+  homeIcon.onclick = function (e) {
+    if (isClick) {
+      homeShow();
+      userHidden();
+      musicHidden()
+      navHidden()
+      newsHidden()
+    } else {
+      navShow()
+    }
+    e.stopPropagation();
+  };
+  //user click
+  function userShow() {//user show
+    user.classList.remove("hidden");
+    user.classList.add("active");
+  }
+  function userHidden() {// user hidden
+    user.classList.remove("active");
+    user.classList.add("hidden");
+  }
+  userIcon.onclick = function () {
+    homeHidden();
+    musicHidden()
+    userShow();
+    navHidden()
+    newsHidden()
+
+  };
+  // music click
+  function musicShow() {// music show
+    music.classList.remove("hidden");
+    music.classList.add("active");
+  }
+  function musicHidden() {// music hidden
+    music.classList.remove("active");
+    music.classList.add("hidden");
+  }
+  musicIcon.onclick = function() {
+    musicShow();
+    homeHidden();
+    userHidden();
+    navHidden()
+    newsHidden()
+  }
+  //news
+  function newsShow() {// music show
+    news.classList.remove("hidden");
+    news.classList.add("active");
+  }
+  function newsHidden() {// news hidden
+    news.classList.remove("active");
+    news.classList.add("hidden");
+  }
+  newsIcon.onclick = function() {
+    musicHidden()
+    homeHidden();
+    userHidden();
+    navHidden()
+    newsShow()
   }
 }
-/* Tua bài  */
 
-function moveSlider() {
-  slider.onchange = function () {
-    var seekTime = (slider.value * audio.duration) / 100;
-    audio.currentTime = seekTime;
+/* home render */
+function homeRender() {
+  let contentHome = {
+    nameHome: "lê thế dũng",
+    subName:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ducimus numquam suscipit qui dolorem quas id laboriosam sed sint eveniet quaerat blanditiis voluptatem ab ipsa officiis. A minima perspiciatis minus.",
   };
+  mainHome.innerHTML = `<h2 class="name">${contentHome.nameHome}</h2>
+  <p class="sub-name">${contentHome.subName}</p>
+</div>`;
+  tagHomes();
 }
 
-/* slider run */
-function sliderRun() {
-  audio.ontimeupdate = function () {
-    sliderTime();
-  };
-}
-
-/* playBtn change */
-
-function playBtnChange(isPlay) {
-  if (isPlay) {
-    playButton.style.display = "none";
-    pauseButton.style.display = "initial";
-  } else {
-    pauseButton.style.display = "none";
-    playButton.style.display = "initial";
+/* render tagHome */
+function tagHomes() {
+  class contentTag {
+    constructor(name, color) {
+      (this.name = name), (this.color = color);
+    }
   }
-}
-/* main Music change */
-function nameImgChange(index) {
-  mainImgSong.style.backgroundImage = `url(${listSong[index].img})`;
-  mainNameSong.innerText = listSong[index].nameSong;
-}
-/* listen event play */
-
-function eventPlay() {
-  /* play audio */
-  var isPlaying = false;
-  playButton.onclick = function () {
-    audio.play();
-    isPlaying = true;
-    playBtnChange(isPlaying);
-    sliderRun();
-    animateSong.play();
-  };
-  pauseButton.onclick = function () {
-    audio.pause();
-    isPlaying = false;
-    playBtnChange(isPlaying);
-    animateSong.pause();
-  };
-}
-/* choose music */
-function chooseMusic(song, listSong, audio) {
-  song.forEach((sog, index) => {
-    sog.onclick = function () {
-      song.forEach((remove) => {
-        remove.classList.remove("active--song");
-      });
-      sog.classList.add("active--song");
-      var link = listSong[index].link;
-      audio.src = link;
-      audio.play();
-      playBtnChange(true);
-      nameImgChange(index);
-      animateSong.play();
-      songPlay = index;
-    };
+  var tagArray = [
+    new contentTag("thân thiện", "#F1C40F"),
+    new contentTag("vui vẻ", "#E67E22"),
+    new contentTag("hòa đồng", "#E74C3C"),
+    new contentTag("vui tính", "#8E44AD"),
+  ];
+  tagArray.forEach((tag) => {
+    tagHome.innerHTML += `<span style='background-color: ${tag.color} '> ${tag.name} </span>`;
   });
 }
 
-/* next song */
+/* render social user */
 
-function nextSong(song, listSong, audio) {
-  nextButton.onclick = function () {
-    if (songPlay < song.length - 1) {
-      songPlay++;
-    } else songPlay = 0;
-    var link = listSong[songPlay].link;
-    audio.src = link;
-    audio.play();
-    animateSong.play();
-    playBtnChange(true);
-    nameImgChange(songPlay);
-    song.forEach((sogRemove) => {
-      sogRemove.classList.remove("active--song");
-    });
-    song[songPlay].classList.add("active--song");
-  };
-  backButton.onclick = function () {
-    /* code bị lặp lại fix sau */
-    if (songPlay > 0 && songPlay <= song.length - 1) {
-      songPlay--;
-    } else return;
-    console.log(songPlay);
-    var link = listSong[songPlay].link;
-    audio.src = link;
-    audio.play();
-    playBtnChange(true);
-    nameImgChange(songPlay);
-    animateSong.play();
-    song.forEach((sogRemove) => {
-      sogRemove.classList.remove("active--song");
-    });
-    song[songPlay].classList.add("active--song");
-  };
+function socialRender() {
+  class social {
+    constructor(logo, name, color) {
+      (this.log = logo), (this.name = name), (this.color = color);
+    }
+  }
+  let socialArray = [
+    new social(
+      ' <i class="fab fa-facebook-messenger user--icon"></i>',
+      "message",
+      "#9B59B6"
+    ),
+    new social(
+      ' <i class="fab fa-instagram user--icon"></i> ',
+      "instagram",
+      "#E74C3C"
+    ),
+    new social(' <i class="fab fa-twitter-square"></i> ', "twitter", "#3498DB"),
+  ];
+  socialArray.forEach((sog) => {
+    contentSocial.innerHTML += `<div style='background-color:${sog.color}' class="social-name">
+      ${sog.log}
+      <p>${sog.name}</p>
+    </div>`;
+  });
+}
+/* render news */
+
+function newsRender() {
+  class newsContent{
+    constructor(heading, subHeading, img) {
+      this.heading = heading,
+      this.subHeading = subHeading,
+      this.img = img
+    }
+  }
+  let newsArray = [
+    new newsContent('Lê Thế Dũng','Chào các bạn, mình là Hà Thị Chung, học sinh lớp 6A, trường THCS (tên trường). Gia đình mình có năm người. Bố mình là Hà Huy Hoàng, bố làm kỹ sư xây dựng. Ngôi nhà cả gia đình mình đang sống chính là do bố thiết kế. Mẹ mình là Nguyễn Thị Hoa là một giáo viên tiểu học', './assets/imgs/image2.jpg'),
+    new newsContent('đoạn văn mẫu số 2','Đỗ Minh Giang là tên mà ba mẹ đặt cho lúc em mới ra đời. Nhưng mọi người trong nhà vẫn quen gọi em là Bé Còi. Cái tên đó xem ra rất hợp với thân hình nhỏ nhắn và nói đúng hơn là còi cọc của em. Ăn rất khoẻ nhưng em nghịch cũng dữ nên mẹ bảo em không thể lớn được', './assets/imgs/image3.jpg'),
+    new newsContent('đoạn văn mẫu số 3','Tôi tên là Đỗ Tuấn Anh. Năm nay, tôi bảy tuổi. Hiện tại, tôi đang là học sinh lớp 6A6. Gia đình của tôi có bốn thành viên là bố, mẹ, tôi và em gái. Tôi rất yêu quý mọi người trong gia đình của mình. Sở thích của tôi là chơi game, đá bóng và đọc sách. Môn học mà tôi giỏi nhất là môn Toán', './assets/imgs/image.jpg'),
+  ]
+  newsArray.forEach(
+    (ne) => {
+      newsContents.innerHTML += ` <div class="new-info">
+      <img src=" ${ne.img}" alt="">
+      <div class="new-container">
+        <h1>${ne.heading}</h1>
+        <p> ${ne.subHeading} </p>
+      </div>`
+    }
+  )
 }

@@ -4,67 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My info</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./assets/music.css">
     <link rel="stylesheet" href="./assets/app.css" />
+    <title>Info</title>
   </head>
   <body>
     <div id="main">
-      <div class="main js--main-play">
-        <div class="content-main">
-          <div class="content-info content--sub">
-            <div class="content-main-header">
-              <h1></h1>
-              <div class="stick"></div>
+      <section class="header">
+        <div class="header-list-icon">
+          <i class="fas fa-user header-icon icon--user"></i>
+         <div class="div--home"><i class="fas fa-home header-icon icon--home">
+        </i></div>
+      </i>
+      <i class="fas fa-list-alt header-icon icon--more"></i>
+    </div>
+    <div class="header-nav hidden">
+      <i class="fas fa-play-circle icon--music"></i>
+      <i class="fas fa-code icon--code"></i>
+    </div>
+      </section>
+      <section class="home active">
+        <div class="home-avt">
+          <img src="./assets/imgs/image.jpg" alt="">
+        </div>
+        <div class="home-info">
+          <!-- this is home info -->
+          </div>
+        <div class="home-tag">
+          
+        </div>
+      </section>
+      <section class="user hidden">
+        <div class="user-tag">
+          <h1>User</h1>
+        </div>
+        <div class="user-content">
+          <div class="user-top">
+            <img src="./assets/imgs/image.jpg" alt="">
+          <div class="user-top-info">
+            <p>lê thế dũng</p>
+            <p>corepper03@gmail.com</p>
+          </div>
+          </div>
+          <div class="user-social">
+            <div class="user-header-tag">
+              <i class="fas fa-users"></i>
+              <p>social</p>
             </div>
-            <div class="play-lists">
-              <div class="play-controls">
-                <div class="play-info">
-                  <p></p>
-                  <div class="play-img"></div>
-                  <span>Name</span>
-                </div>
-                <input
-                  type="range"
-                  class="slider"
-                  name="rage"
-                  id=""
-                  min="0"
-                  max="100"
-                  step="1"
-                  value="0"
-                />
-                <div class="play-controls-btn">
-                  <i class="fas fa-fast-backward play--back"></i>
-                  <i class="fas fa-pause-circle play--pause"></i>
-                  <i class="fas fa-play-circle play--play"></i>
-                  <i class="fas fa-fast-forward play--next"></i>
-                </div>
-              </div>
-              <div class="play-list-song">
-                <div class="song">
-                  <div class="song-avt"></div>
-                  <div class="song-info">
-                    <h1>song name</h1>
-                    <span>author</span>
-                  </div>
-                </div>
-              </div>
-              <audio src="assets/audio/" class="audio"></audio>
-            </div>
+            
           </div>
         </div>
-      </div>
+      </section>
+      <section class="music hidden">
+        <div class="main js--main-play">
+          <div class="content-main">
+            <div class="content-info content--sub">
+              <div class="content-main-header">
+                <h1></h1>
+                <div class="stick"></div>
+              </div>
+              <div class="play-lists">
+                <div class="play-controls">
+                  <div class="play-info">
+                    <p></p>
+                    <div class="play-img"></div>
+                    <span>Name</span>
+                  </div>
+                  <input
+                    type="range"
+                    class="slider"
+                    name="rage"
+                    id=""
+                    min="0"
+                    max="100"
+                    step="1"
+                    value="0"
+                  />
+                  <div class="play-controls-btn">
+                    <i class="fas fa-fast-backward play--back"></i>
+                    <i class="fas fa-pause-circle play--pause"></i>
+                    <i class="fas fa-play-circle play--play"></i>
+                    <i class="fas fa-fast-forward play--next"></i>
+                  </div>
+                </div>
+                <div class="play-list-song">
+                  <div class="song">
+                    <div class="song-avt"></div>
+                    <div class="song-info">
+                      <h1>song name</h1>
+                      <span>author</span>
+                    </div>
+                  </div>
+                </div>
+                <audio src="assets/audio/" class="audio"></audio>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="news hidden">
+        <div class="news-tag">
+          <h1>news</h1>
+        </div>
+        <div class="news-content">
+          
+          </div>
+        </div>
+      </section>
+      <section class="code hidden">
+        <h1>comingsoon</h1>
+      </section>
     </div>
+    <script src="./assets/music.js"></script>
     <script src="./assets/app.js"></script>
   </body>
 </html>
