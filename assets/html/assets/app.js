@@ -178,10 +178,10 @@ function headerEvent() {
 /* change avt */
 var i = 0;
 let avt = [
-  '../assets/imgs/image.jpg',
-  '../assets/imgs/image1.jpg',
-  '../assets/imgs/image2.jpg',
-  '../assets/imgs/image3.jpg',
+  './assets/imgs/image.jpg',
+  './assets/imgs/image1.jpg',
+  './assets/imgs/image2.jpg',
+  './assets/imgs/image3.jpg',
 ]
 function changeAvt(i) {
 homeAvt.src = avt[i]
