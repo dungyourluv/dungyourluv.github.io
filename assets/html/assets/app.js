@@ -154,6 +154,7 @@ function homeRender() {
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ducimus numquam suscipit qui dolorem quas id laboriosam sed sint eveniet quaerat blanditiis voluptatem ab ipsa officiis. A minima perspiciatis minus.",
   };
   mainHome.innerHTML = `<h2 class="name">${contentHome.nameHome}</h2>
+  <span>I'm a student, I don't stand out.</span>
   <p class="sub-name">${contentHome.subName}</p>
 </div>`;
   tagHomes();
@@ -181,25 +182,27 @@ function tagHomes() {
 
 function socialRender() {
   class social {
-    constructor(logo, name, color) {
-      (this.log = logo), (this.name = name), (this.color = color);
+    constructor(logo, name, color, link) {
+      (this.log = logo), (this.name = name), (this.color = color),(this.link = link);
     }
   }
   let socialArray = [
     new social(
       ' <i class="fab fa-facebook-messenger user--icon"></i>',
       "message",
-      "#9B59B6"
+      "#9B59B6",
+      "https://m.facebook.com/teee.dunn"
     ),
     new social(
       ' <i class="fab fa-instagram user--icon"></i> ',
       "instagram",
-      "#E74C3C"
+      "#E74C3C",
+      "https://www.instagram.com/teee.dunn/"
     ),
-    new social(' <i class="fab fa-twitter-square"></i> ', "twitter", "#3498DB"),
+    new social(' <i class="fab fa-twitter-square"></i> ', "twitter", "#3498DB","https://twitter.com/?lang=vi"),
   ];
   socialArray.forEach((sog) => {
-    contentSocial.innerHTML += `<div style='background-color:${sog.color}' class="social-name">
+    contentSocial.innerHTML += `<div style='background-color:${sog.color}' onclick="window.location.href = '${sog.link}'" class="social-name">
       ${sog.log}
       <p>${sog.name}</p>
     </div>`;

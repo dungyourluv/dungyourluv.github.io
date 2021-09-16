@@ -179,10 +179,19 @@ button {
 }
 .home-info h2 {
   text-align: center;
-  margin-bottom: 10px;
   font-size: 3.4rem;
   color: var(--btn-background-color);
   text-transform: capitalize;
+}
+.home-info span {
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  color: var(--text-light-color);
+  border-bottom: 2px dashed;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  
 }
 
 /* css tag */
