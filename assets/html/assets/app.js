@@ -9,7 +9,7 @@ var nameHome = $(".name");
 var subNameHome = $(".sub-name");
 var tagHome = $(".home-tag");
 var home = $(".home");
-var homeAvt = $('.home-avt img')
+var homeAvt = $(".home-avt img");
 /* get social */
 var contentSocial = $(".user-social");
 /* get user */
@@ -26,33 +26,34 @@ var newsContents = $(".news-content");
 var codeIcon = $(".icon--code");
 var code = $(".code");
 var codeContents = $(".code-content");
+var codeProject = $(".code-project");
 /* get loader */
 var loader = $(".loader");
-var loaderIcon = $('.loader--icon')
-
+var loaderIcon = $(".loader--icon");
 
 /* loaderIcon spiner */
 function loaderIconSpiner() {
   var keyFarme = [
     {
-      transform: 'rotate(360deg)',
-    }
-  ]
+      transform: "rotate(360deg)",
+    },
+  ];
   loaderIcon.animate(keyFarme, {
     duration: 1000,
     iterations: Infinity,
-  })
+  });
 }
 window.onload = function () {
-  loader.classList.add('hidden')
-}
+  loader.classList.add("hidden");
+};
 /* ham chay */
 function start() {
-  loaderIconSpiner()
+  loaderIconSpiner();
   headerEvent();
   homeRender();
   socialRender();
   newsRender();
+  projectRender();
 }
 start();
 
@@ -178,22 +179,20 @@ function headerEvent() {
 /* change avt */
 var i = 0;
 let avt = [
-  './assets/imgs/image.jpg',
-  './assets/imgs/image1.jpg',
-  './assets/imgs/image2.jpg',
-  './assets/imgs/image3.jpg',
-]
+  "./assets/imgs/image.jpg",
+  "./assets/imgs/image1.jpg",
+  "./assets/imgs/image2.jpg",
+  "./assets/imgs/image3.jpg",
+];
 function changeAvt(i) {
-homeAvt.src = avt[i]
+  homeAvt.src = avt[i];
 }
-setInterval(
-  () => {
-    if (i < avt.length - 1) {
-      changeAvt(i);
-      i++
-    }else i = 0
-  },3000
-)
+setInterval(() => {
+  if (i < avt.length - 1) {
+    changeAvt(i);
+    i++;
+  } else i = 0;
+}, 3000);
 
 /* home render */
 function homeRender() {
@@ -300,4 +299,87 @@ function newsRender() {
         <p> ${ne.subHeading} </p>
       </div>`;
   });
+}
+/* project effect */
+
+function projectEffect() {
+  var projectBtn = $$(".project-content");
+  var projectSub = $$(".project-sub");
+  console.log(projectBtn);
+  console.log(projectSub);
+  var heightSubProject = 600;
+  var heightNoClick = projectSub[0].clientHeight;
+  console.log(heightNoClick);
+  projectBtn.forEach((btn, index) => {
+    btn.onclick = function () {
+      let heightDefulSubProject = projectSub[index].clientHeight;
+      if (heightDefulSubProject < heightSubProject) {
+        projectSub[index].classList.add("project--sub-full");
+        for (var i = 0; i <= heightSubProject; i++) {
+          projectSub[index].style.height = i + "px";
+        }
+      } else {
+        for (let x = heightDefulSubProject; x >= heightNoClick; x--) {
+          projectSub[index].style.height = x + "px";
+        }
+        projectSub[index].classList.remove("project--sub-full");
+      }
+    };
+  });
+}
+projectRender();
+function projectRender() {
+  class coder {
+    constructor(title, codeHeader, codeSub, codeImg,icon) {
+      (this.title = title),
+        (this.codeHeader = codeHeader),
+        (this.codeSub = codeSub),
+        (this.codeImg = codeImg),
+        (this.icon = icon);
+    }
+  }
+  var codeArray = [
+    new coder(
+      "heading",
+      "heading",
+      "this is heading",
+      "./assets/imgs/image.jpg",
+      '<i class="fas fa-heart code--icon"></i>'
+    ),
+    new coder(
+      "this is heading",
+      "this is heading",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste autem vitae dolor numquam quis doloremque laudantium officia! Ipsa, nostrum nobis itaque iusto quidem quis omnis minima assumenda quo quae iste.",
+      "./assets/imgs/image2.jpg",
+      '<i class="fas fa-heart code--icon"></i>'
+    ),
+    new coder(
+      "header",
+      "header",
+      "hello",
+      "./assets/imgs/image3.jpg",
+      '<i class="fas fa-heart code--icon"></i>'
+    ),
+  ];
+  var html = codeArray.map((code) => {
+    console.log(code.codeImg)
+    return `<li class="project-in-code">
+      <div class="project-content">
+         <p> ${code.icon} ${code.title}
+   <div class="code-nav">
+     <i class="fas fa-angle-down nav-down"></i>
+     <i class="fas fa-angle-up nav-up hidden"></i>
+   </div>
+      </div>
+      <ul class="project-sub ">
+        <li>
+          <img src="${code.codeImg}" alt="">
+          <h2>${code.codeHeader}</h2>
+          <p>${code.codeSub}</p>
+        </li>
+      </ul>
+    </li>`;
+  });
+  codeProject.innerHTML = html.join("");
+  projectEffect()
 }
