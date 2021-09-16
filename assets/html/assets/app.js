@@ -9,46 +9,69 @@ var nameHome = $(".name");
 var subNameHome = $(".sub-name");
 var tagHome = $(".home-tag");
 var home = $(".home");
+var homeAvt = $('.home-avt img')
 /* get social */
 var contentSocial = $(".user-social");
 /* get user */
 var userIcon = $(".icon--user");
 var user = $(".user");
 /* get music */
-var musicIcon = $('.icon--music');
-var music = $('.music')
+var musicIcon = $(".icon--music");
+var music = $(".music");
 /* get news */
-var newsIcon = $('.icon--more')
-var news = $('.news')
-var newsContents = $('.news-content')
+var newsIcon = $(".icon--more");
+var news = $(".news");
+var newsContents = $(".news-content");
 /* get code */
-var codeIcon = $('.icon--code')
-var code = $('.code');
-var codeContents = $('.code-content')
+var codeIcon = $(".icon--code");
+var code = $(".code");
+var codeContents = $(".code-content");
+/* get loader */
+var loader = $(".loader");
+var loaderIcon = $('.loader--icon')
 
 
-
+/* loaderIcon spiner */
+function loaderIconSpiner() {
+  var keyFarme = [
+    {
+      transform: 'rotate(360deg)',
+    }
+  ]
+  loaderIcon.animate(keyFarme, {
+    duration: 1000,
+    iterations: Infinity,
+  })
+}
+window.onload = function () {
+  loader.classList.add('hidden')
+}
 /* ham chay */
 function start() {
+  loaderIconSpiner()
   headerEvent();
   homeRender();
   socialRender();
-  newsRender()
+  newsRender();
 }
 start();
 
+/* loader*/
+
 /* xu ly su kien header doan nay code luom thuom lap lai qua nhieu fix sau*/
 isClick = false;
-function homeShow() {//home show
+function homeShow() {
+  //home show
   home.classList.remove("hidden");
   home.classList.add("active");
 }
-function homeHidden() {//home hidden
+function homeHidden() {
+  //home hidden
   home.classList.add("hidden");
   home.classList.remove("active");
 }
 function headerEvent() {
-  //nav 
+  //nav
   function navHidden() {
     navHome.classList.add("hidden");
     navHome.classList.remove("header-nav--active");
@@ -56,95 +79,121 @@ function headerEvent() {
   }
   function navShow() {
     navHome.classList.remove("hidden");
-      navHome.classList.add("header-nav--active");
-      isClick = true;
+    navHome.classList.add("header-nav--active");
+    isClick = true;
   }
   //home click
   homeIcon.onclick = function (e) {
     if (isClick) {
       homeShow();
       userHidden();
-      musicHidden()
-      navHidden()
-      newsHidden()
-      codeHidden()
+      musicHidden();
+      navHidden();
+      newsHidden();
+      codeHidden();
     } else {
-      navShow()
+      navShow();
     }
     e.stopPropagation();
   };
   //user click
-  function userShow() {//user show
+  function userShow() {
+    //user show
     user.classList.remove("hidden");
     user.classList.add("active");
   }
-  function userHidden() {// user hidden
+  function userHidden() {
+    // user hidden
     user.classList.remove("active");
     user.classList.add("hidden");
   }
   userIcon.onclick = function () {
     homeHidden();
-    musicHidden()
+    musicHidden();
     userShow();
-    navHidden()
-    newsHidden()
-    codeHidden()
-
+    navHidden();
+    newsHidden();
+    codeHidden();
   };
   // music click
-  function musicShow() {// music show
+  function musicShow() {
+    // music show
     music.classList.remove("hidden");
     music.classList.add("active");
   }
-  function musicHidden() {// music hidden
+  function musicHidden() {
+    // music hidden
     music.classList.remove("active");
     music.classList.add("hidden");
   }
-  musicIcon.onclick = function() {
+  musicIcon.onclick = function () {
     musicShow();
     homeHidden();
     userHidden();
-    navHidden()
-    newsHidden()
-    codeHidden()
-  }
+    navHidden();
+    newsHidden();
+    codeHidden();
+  };
   //news
-  function newsShow() {// music show
+  function newsShow() {
+    // music show
     news.classList.remove("hidden");
     news.classList.add("active");
   }
-  function newsHidden() {// news hidden
+  function newsHidden() {
+    // news hidden
     news.classList.remove("active");
     news.classList.add("hidden");
   }
-  newsIcon.onclick = function() {
-    musicHidden()
+  newsIcon.onclick = function () {
+    musicHidden();
     homeHidden();
     userHidden();
-    navHidden()
-    newsShow()
-    codeHidden()
-  }
+    navHidden();
+    newsShow();
+    codeHidden();
+  };
   //code
-  function codeShow() {// code show
+  function codeShow() {
+    // code show
     code.classList.remove("hidden");
     code.classList.add("active");
-    console.log('show')
+    console.log("show");
   }
-  function codeHidden() {// code hidden
+  function codeHidden() {
+    // code hidden
     code.classList.remove("active");
     code.classList.add("hidden");
   }
-  
-  codeIcon.onclick = function() {
-      musicHidden();
-      homeHidden();
-      userHidden();
-      navHidden()
-      newsHidden()
-      codeShow()
-  }
+
+  codeIcon.onclick = function () {
+    musicHidden();
+    homeHidden();
+    userHidden();
+    navHidden();
+    newsHidden();
+    codeShow();
+  };
 }
+/* change avt */
+var i = 0;
+let avt = [
+  '../assets/imgs/image.jpg',
+  '../assets/imgs/image1.jpg',
+  '../assets/imgs/image2.jpg',
+  '../assets/imgs/image3.jpg',
+]
+function changeAvt(i) {
+homeAvt.src = avt[i]
+}
+setInterval(
+  () => {
+    if (i < avt.length - 1) {
+      changeAvt(i);
+      i++
+    }else i = 0
+  },3000
+)
 
 /* home render */
 function homeRender() {
@@ -183,7 +232,10 @@ function tagHomes() {
 function socialRender() {
   class social {
     constructor(logo, name, color, link) {
-      (this.log = logo), (this.name = name), (this.color = color),(this.link = link);
+      (this.log = logo),
+        (this.name = name),
+        (this.color = color),
+        (this.link = link);
     }
   }
   let socialArray = [
@@ -199,7 +251,12 @@ function socialRender() {
       "#E74C3C",
       "https://www.instagram.com/teee.dunn/"
     ),
-    new social(' <i class="fab fa-twitter-square"></i> ', "twitter", "#3498DB","https://twitter.com/?lang=vi"),
+    new social(
+      ' <i class="fab fa-twitter-square"></i> ',
+      "twitter",
+      "#3498DB",
+      "https://twitter.com/?lang=vi"
+    ),
   ];
   socialArray.forEach((sog) => {
     contentSocial.innerHTML += `<div style='background-color:${sog.color}' onclick="window.location.href = '${sog.link}'" class="social-name">
@@ -211,26 +268,36 @@ function socialRender() {
 /* render news */
 
 function newsRender() {
-  class newsContent{
+  class newsContent {
     constructor(heading, subHeading, img) {
-      this.heading = heading,
-      this.subHeading = subHeading,
-      this.img = img
+      (this.heading = heading),
+        (this.subHeading = subHeading),
+        (this.img = img);
     }
   }
   let newsArray = [
-    new newsContent('Lê Thế Dũng','Chào các bạn, mình là Hà Thị Chung, học sinh lớp 6A, trường THCS (tên trường). Gia đình mình có năm người. Bố mình là Hà Huy Hoàng, bố làm kỹ sư xây dựng. Ngôi nhà cả gia đình mình đang sống chính là do bố thiết kế. Mẹ mình là Nguyễn Thị Hoa là một giáo viên tiểu học', './assets/imgs/image2.jpg'),
-    new newsContent('đoạn văn mẫu số 2','Đỗ Minh Giang là tên mà ba mẹ đặt cho lúc em mới ra đời. Nhưng mọi người trong nhà vẫn quen gọi em là Bé Còi. Cái tên đó xem ra rất hợp với thân hình nhỏ nhắn và nói đúng hơn là còi cọc của em. Ăn rất khoẻ nhưng em nghịch cũng dữ nên mẹ bảo em không thể lớn được', './assets/imgs/image3.jpg'),
-    new newsContent('đoạn văn mẫu số 3','Tôi tên là Đỗ Tuấn Anh. Năm nay, tôi bảy tuổi. Hiện tại, tôi đang là học sinh lớp 6A6. Gia đình của tôi có bốn thành viên là bố, mẹ, tôi và em gái. Tôi rất yêu quý mọi người trong gia đình của mình. Sở thích của tôi là chơi game, đá bóng và đọc sách. Môn học mà tôi giỏi nhất là môn Toán', './assets/imgs/image.jpg'),
-  ]
-  newsArray.forEach(
-    (ne) => {
-      newsContents.innerHTML += ` <div class="new-info">
+    new newsContent(
+      "Lê Thế Dũng",
+      "Chào các bạn, mình là Hà Thị Chung, học sinh lớp 6A, trường THCS (tên trường). Gia đình mình có năm người. Bố mình là Hà Huy Hoàng, bố làm kỹ sư xây dựng. Ngôi nhà cả gia đình mình đang sống chính là do bố thiết kế. Mẹ mình là Nguyễn Thị Hoa là một giáo viên tiểu học",
+      "./assets/imgs/image2.jpg"
+    ),
+    new newsContent(
+      "đoạn văn mẫu số 2",
+      "Đỗ Minh Giang là tên mà ba mẹ đặt cho lúc em mới ra đời. Nhưng mọi người trong nhà vẫn quen gọi em là Bé Còi. Cái tên đó xem ra rất hợp với thân hình nhỏ nhắn và nói đúng hơn là còi cọc của em. Ăn rất khoẻ nhưng em nghịch cũng dữ nên mẹ bảo em không thể lớn được",
+      "./assets/imgs/image3.jpg"
+    ),
+    new newsContent(
+      "đoạn văn mẫu số 3",
+      "Tôi tên là Đỗ Tuấn Anh. Năm nay, tôi bảy tuổi. Hiện tại, tôi đang là học sinh lớp 6A6. Gia đình của tôi có bốn thành viên là bố, mẹ, tôi và em gái. Tôi rất yêu quý mọi người trong gia đình của mình. Sở thích của tôi là chơi game, đá bóng và đọc sách. Môn học mà tôi giỏi nhất là môn Toán",
+      "./assets/imgs/image.jpg"
+    ),
+  ];
+  newsArray.forEach((ne) => {
+    newsContents.innerHTML += ` <div class="new-info">
       <img src=" ${ne.img}" alt="">
       <div class="new-container">
         <h1>${ne.heading}</h1>
         <p> ${ne.subHeading} </p>
-      </div>`
-    }
-  )
+      </div>`;
+  });
 }

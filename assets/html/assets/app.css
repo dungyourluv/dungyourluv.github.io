@@ -53,6 +53,35 @@ button {
 }
 
 /* -------- */
+
+/* loader */
+
+.loader {
+  transition: 1s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s all;
+  z-index: 99;
+  font-size: 5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+ background-image:  url(data:image/jpeg;base64,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z0zTyXIENg5QMmC9dwcFWSE5wVZQC1pIfmivKROMFmWZldPRnJmcFOcG5ZFmWJjdtJkvPMpzyG54lWeIPa3KecRk4FsYD444p9AuEMYFEYFscYojji9h5QxxyiOOWxxyiMAXRcef+cVpxj2VgDeAfS8fPa8Yi14p9LrxyTXjHel4+bvii3xT374ov8pPRceMuKEuMev+Y3839Hel48j84NYHsfn/AKAfHO6NeNWAusD2a44quOL0jxqwFXiezfHEXgXqcePeJPeR7GmJLpkXqWPKvMQ8z09MhDzFKPHzjxM+J6z4xn5jX2y8vLWIc4norjBzxzva+UUYlOWRVHHKcuOC7KZIyxPQwxDxwL8OOZa29OcgxxLcsB2HHLcsDDWm0ynzwKc8CnPEojIyui4RniU54js8ynPMs2GskRgPjEozzHTmaysbE84jpyHzmNmBAmWRlZFnkxydx3XnaYk14HrVmJrIlWV5FccD856zxB+IT68v8/8ARj456nxMeJzuvKfHArA9Z4i6xLEeRWAm8D17yEXkVHkXiT6Ynr6ZE2mZeuePpkS6ZHsaZEumJeueNpkIeR6+mIh4C67jw2YccaMnIJHHHONgpg44NPKzEuwOOMdPRlfiW5nHGFaqIHSccBx0FEHHCgVRA6DjjbLDRsjEYcaM604445zKFUccSrC2CacGkw444igoXZxwhJsns445yeybQ445U9k2hxxXJ7Es444n/9k=);
+}
+.loader--icon {
+  display: inline-block;
+  color: var(--text-dark-color);
+  text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 20px;
+}
+
+
+
+
+
 /* header */
 .header {
   background-color: var(--background-light-theme-color);
@@ -271,13 +300,18 @@ button {
 .social-name {
   display: inline-flex;
   font-size: 2rem;
-  background-color: #3498db;
+  
   padding: 10px;
   border-radius: 8px;
   margin: 6px;
   width: calc(100% / 3 + 26px);
   color: var(--background-light-theme-color);
   text-transform: capitalize;
+  transition: 0.5s all;
+}
+.social-name:hover {
+  background-color: #74bbeb;
+
 }
 .social-name p {
   padding: 0 8px;
