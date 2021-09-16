@@ -21,6 +21,10 @@ var music = $('.music')
 var newsIcon = $('.icon--more')
 var news = $('.news')
 var newsContents = $('.news-content')
+/* get code */
+var codeIcon = $('.icon--code')
+var code = $('.code');
+var codeContents = $('.code-content')
 
 
 
@@ -33,7 +37,7 @@ function start() {
 }
 start();
 
-/* xu ly su kien header */
+/* xu ly su kien header doan nay code luom thuom lap lai qua nhieu fix sau*/
 isClick = false;
 function homeShow() {//home show
   home.classList.remove("hidden");
@@ -63,6 +67,7 @@ function headerEvent() {
       musicHidden()
       navHidden()
       newsHidden()
+      codeHidden()
     } else {
       navShow()
     }
@@ -83,6 +88,7 @@ function headerEvent() {
     userShow();
     navHidden()
     newsHidden()
+    codeHidden()
 
   };
   // music click
@@ -100,6 +106,7 @@ function headerEvent() {
     userHidden();
     navHidden()
     newsHidden()
+    codeHidden()
   }
   //news
   function newsShow() {// music show
@@ -116,6 +123,26 @@ function headerEvent() {
     userHidden();
     navHidden()
     newsShow()
+    codeHidden()
+  }
+  //code
+  function codeShow() {// code show
+    code.classList.remove("hidden");
+    code.classList.add("active");
+    console.log('show')
+  }
+  function codeHidden() {// code hidden
+    code.classList.remove("active");
+    code.classList.add("hidden");
+  }
+  
+  codeIcon.onclick = function() {
+      musicHidden();
+      homeHidden();
+      userHidden();
+      navHidden()
+      newsHidden()
+      codeShow()
   }
 }
 

@@ -7,9 +7,17 @@ var pauseButton = document.querySelector(".play--pause");
 var mainImgSong = document.querySelector(".play-img");
 var mainNameSong = document.querySelector(".play-info > span");
 var mainTimeSong = document.querySelector(".play-info > p");
+var playInfo = document.querySelector('.play-info')
 var slider = document.querySelector(".slider");
+var music = document.querySelector('.music')
 var songPlay = 0;
 var listSong = [
+  {
+    nameSong: "đón xuân",
+    author: "trayde x mien mien",
+    link: "./assets/audio/donxuan.mp3",
+    img: "./assets/imgs/image3.jpg",
+  },
   {
     nameSong: "bỏ em vào balo",
     author: "tân trần",
@@ -34,6 +42,7 @@ var listSong = [
     link: "./assets/audio/haconvuongnang.mp3",
     img: "./assets/imgs/image.jpg",
   },
+  
 ];
 
 /* background-image: url(./imgs/image.jpg); */

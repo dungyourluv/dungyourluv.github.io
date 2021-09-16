@@ -21,6 +21,11 @@ input[type="range"]::-moz-range-progress {
   background-color: rgba(241, 179, 189, 0.877);
   padding: 16px;
   border-radius: 8px;
+  left: 0;
+  right: 0;
+  top: -160px;
+  transition: 2s all;
+  z-index: 2;
 }
 .play-info {
   font-weight: bold;
