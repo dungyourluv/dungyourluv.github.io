@@ -30,7 +30,6 @@ var codeProject = $(".code-project");
 /* get loader */
 var loader = $(".loader");
 var loaderIcon = $(".loader--icon");
-
 /* loaderIcon spiner */
 function loaderIconSpiner() {
   var keyFarme = [
@@ -50,10 +49,10 @@ window.onload = function () {
 function start() {
   loaderIconSpiner();
   headerEvent();
-  homeRender();
   socialRender();
   newsRender();
   projectRender();
+  homeRender();
 }
 start();
 
@@ -159,7 +158,6 @@ function headerEvent() {
     // code show
     code.classList.remove("hidden");
     code.classList.add("active");
-    console.log("show");
   }
   function codeHidden() {
     // code hidden
@@ -199,7 +197,7 @@ function homeRender() {
   let contentHome = {
     nameHome: "lê thế dũng",
     subName:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ducimus numquam suscipit qui dolorem quas id laboriosam sed sint eveniet quaerat blanditiis voluptatem ab ipsa officiis. A minima perspiciatis minus.",
+      "Tôi là một doanh nhân người Việt, nhà từ thiện, tác giả và chủ tịch tập đoàn Microsoft, hãng phần mềm khổng lồ mà tôi cùng với Paul Allen đã sáng lập ra. tôi luôn có mặt trong danh sách những người giàu nhất trên thế giới. Wikipedia",
   };
   mainHome.innerHTML = `<h2 class="name">${contentHome.nameHome}</h2>
   <span>I'm a student, I don't stand out.</span>
@@ -305,11 +303,8 @@ function newsRender() {
 function projectEffect() {
   var projectBtn = $$(".project-content");
   var projectSub = $$(".project-sub");
-  console.log(projectBtn);
-  console.log(projectSub);
   var heightSubProject = 600;
   var heightNoClick = projectSub[0].clientHeight;
-  console.log(heightNoClick);
   projectBtn.forEach((btn, index) => {
     btn.onclick = function () {
       let heightDefulSubProject = projectSub[index].clientHeight;
@@ -330,7 +325,7 @@ function projectEffect() {
 projectRender();
 function projectRender() {
   class coder {
-    constructor(title, codeHeader, codeSub, codeImg,icon) {
+    constructor(title, codeHeader, codeSub, codeImg, icon) {
       (this.title = title),
         (this.codeHeader = codeHeader),
         (this.codeSub = codeSub),
@@ -340,29 +335,35 @@ function projectRender() {
   }
   var codeArray = [
     new coder(
-      "heading",
-      "heading",
+      "love",
+      "love project",
       "this is heading",
       "./assets/imgs/image.jpg",
-      '<i class="fas fa-heart code--icon"></i>'
+      '<i class="fas fa-heart code--icon" style="color: pink;"></i>'
     ),
     new coder(
-      "this is heading",
+      "love story",
       "this is heading",
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste autem vitae dolor numquam quis doloremque laudantium officia! Ipsa, nostrum nobis itaque iusto quidem quis omnis minima assumenda quo quae iste.",
       "./assets/imgs/image2.jpg",
-      '<i class="fas fa-heart code--icon"></i>'
+      '<i class="fas fa-history code--icon" style="color: #F1C40F"></i>'
     ),
     new coder(
-      "header",
-      "header",
-      "hello",
+      "my life",
+      "this is my life",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste autem vitae dolor numquam quis doloremque laudantium officia! Ipsa, nostrum nobis itaque iusto quidem quis omnis minima assumenda quo quae iste.",
       "./assets/imgs/image3.jpg",
-      '<i class="fas fa-heart code--icon"></i>'
+      '<i class="fas fa-location-arrow code--icon" style="color: #ECF0F1;"></i></i>'
+    ),
+    new coder(
+      "my crush",
+      "a little about my crush",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste autem vitae dolor numquam quis doloremque laudantium officia! Ipsa, nostrum nobis itaque iusto quidem quis omnis minima assumenda quo quae iste.",
+      "./assets/imgs/image.jpg",
+      '<i class="fas fa-hand-holding-heart code--icon" style="color: #C0392B;"></i>'
     ),
   ];
   var html = codeArray.map((code) => {
-    console.log(code.codeImg)
     return `<li class="project-in-code">
       <div class="project-content">
          <p> ${code.icon} ${code.title}
@@ -381,5 +382,5 @@ function projectRender() {
     </li>`;
   });
   codeProject.innerHTML = html.join("");
-  projectEffect()
+  projectEffect();
 }

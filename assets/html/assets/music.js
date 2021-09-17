@@ -207,3 +207,48 @@ function nextSong(song, listSong, audio) {
     song[songPlay].classList.add("active--song");
   };
 }
+/* get noti */
+var noti = document.querySelector(".noti");
+var notiContent = document.querySelector(".noti-container");
+var notiBtnYes = document.querySelector(".noti-btn > button");
+var notiBtnNo = document.querySelector(".noti-btn > span");
+var audio = document.querySelector(".audio");
+
+/* noti event */
+function notiEvent() {
+  notiBtnYes.onclick = function () {
+    var i = 0, howManyTimes = 100;
+function f() {
+    notiContent.style.bottom = i + '%'
+    i++;
+    if( i <= howManyTimes ){
+      setTimeout( f,5);
+    }
+    if(i === 100) {
+      noti.style.display = 'none'
+      audio.play()
+      playBtnChange(true)
+    animateSong.play();
+    sliderRun();
+  moveSlider();
+
+    }
+}
+f();
+  };
+  notiBtnNo.onclick = function() {
+    var i = 0, howManyTimes = 100;
+function f() {
+    notiContent.style.bottom = i + '%'
+    i++;
+    if( i <= howManyTimes ){
+      setTimeout( f,5);
+    }
+    if(i === 100) {
+      noti.style.display = 'none';
+    }
+}
+f();
+  }
+}
+notiEvent()

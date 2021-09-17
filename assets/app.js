@@ -1,9 +1,9 @@
-var btns = document.querySelectorAll(".header-btn");
-var tasks = document.querySelectorAll(".js--remove");
-var slider = document.querySelector(".play-control-slider");
 if (screen.width <= 740) {
   window.location.href = "./assets/html/mobile.html";
 }
+var btns = document.querySelectorAll(".header-btn");
+var tasks = document.querySelectorAll(".js--remove");
+var slider = document.querySelector(".play-control-slider");
 function start() {
   loader();
   /* custom();
