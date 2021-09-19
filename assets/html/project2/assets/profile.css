@@ -1,0 +1,116 @@
+.profile__setting {
+    box-sizing: initial;
+    text-align: center;
+    display: inline-block;
+    font-size: 4rem;
+    position: relative;
+    right: 0;
+    top: 10%;
+    color: #fff;
+    background-color: var(--btn-color);
+    padding: 8px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.profile__user {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 120px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.profile__user-avt {
+    margin-bottom: calc(-145px / 2);
+    object-fit: cover;
+    border: #fff 8px solid;
+    position: relative;
+    bottom: calc(145px /2);
+    overflow: hidden;
+    height: 145px;
+    width: 145px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+
+}
+
+.profile__user-infomation {
+    width: 100%;
+    opacity: 0.8;
+    margin-top: 10px;
+    text-align: center;
+}
+.profile__user-infomation h2 {
+    position: relative;
+    text-transform: capitalize;
+}
+.profile__user-infomation h2 span {
+    margin-left: 10px;
+    position: absolute;
+    color: #fff;
+    background-color: pink;
+    padding: 2px 8px;
+    font-size: 1.8rem;
+    border-radius: 50px;
+    min-width: 50px;
+
+}
+.profile__user-infomation > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile__user-interact {
+    margin-top: 25px;
+    opacity: 0.7;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.interact {
+    text-align: center;
+}
+
+/* galery */
+
+.profile__gallery {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 10px;
+    overflow: hidden;
+}
+.profile__gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.profile__gallery-header span {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.profile__gallery-header span:hover {
+    color: var(--btn-color);
+    cursor: pointer;
+}
+.profile__gallery-container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+.gallery__img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 6px;
+    border-radius: 10px;
+}
+.gallery__img img {
+    border-radius: 10px;
+}

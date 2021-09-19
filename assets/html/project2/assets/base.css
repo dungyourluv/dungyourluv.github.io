@@ -1,0 +1,84 @@
+/* base */
+:root {
+  --text-color: #64667a;
+  --btn-color: #8b96db;
+  --main-color: #fff;
+  --text-in-btn: #fff;
+  --text-in-backgrd: #fff;
+  --btn-hover: #F9AB9B
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.7rem;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+button {
+  font-size: 1.7rem;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.add-trans {
+  transition: all 0.8s;
+}
+#main {
+  margin-bottom: 66px;
+  z-index: -1;
+  overflow-x: hidden;
+}
+.main {
+  display: flex;
+  transform: translateX(-414px);
+}
+.add--hover:hover {
+  background-color: var(--btn-hover);
+  cursor: pointer;
+}
+.square,.profile,.mess {
+  min-height: 100vh;
+padding: 10px;
+background-size: cover;
+max-width: 100vw;
+overflow-x: hidden;
+}
+.male--icon {
+  color: rgb(170, 229, 252);
+}
+.female--icon {
+  color: pink;
+}
+.profile {
+  order: 3;
+  background-image: url(./imgs/backgrounds/1.png);
+}
+.mess {
+  background-image: url(./imgs/backgrounds/1.png);
+  order: 1;
+}
+.square {
+  order: 2;
+}
+.profile-person {
+  order: 4;
+}

@@ -254,6 +254,12 @@ function socialRender() {
       "#3498DB",
       "https://twitter.com/?lang=vi"
     ),
+    new social(
+      ' <i class="fab fa-centercode"></i> ',
+      "Web test ",
+      "pink",
+      "../html/project2/index.html"
+    ),
   ];
   socialArray.forEach((sog) => {
     contentSocial.innerHTML += `<div style='background-color:${sog.color}' onclick="window.location.href = '${sog.link}'" class="social-name">
