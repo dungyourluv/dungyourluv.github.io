@@ -10,13 +10,10 @@ const formAnswer = document.getElementById('form-answer')
 //get button
 const formBtn = document.querySelector('.form-btn');
 //check value input
-console.log(formAnswer,formName)
 function formHandel() {
     const nameInput = formName.value;
     const answerInput = Number(formAnswer.value);
-    console.log(answerInput)
     if(isNaN(answerInput)) {
-        console.log('hello')
         alert(`lười làm hiệu ứng check thông báo cho lẹ =)), ô thứ 2 nhập số chứ không phải ${formAnswer.value} `);
         return
     }
@@ -37,6 +34,10 @@ function output(nameInput,answerInput,) {
     mainName.innerText = nameInput;
     mainAnswer.innerText = answerInput+'/20';
     let pointoutput = answerInput*5;
+    var secoundRamdom = Math.floor(Math.random() * 59)
+    if (secoundRamdom < 10) {
+        secoundRamdom = '0'+ secoundRamdom;
+    }
     mainPoint.innerText = pointoutput;
-    mainTime.innerText = '00:0' + Math.floor(Math.random() * 9) + ':'+Math.floor(Math.random() * 60);;
+    mainTime.innerText = '00:0' + Math.floor(Math.random() * 9) + ':'+ secoundRamdom;
 }
