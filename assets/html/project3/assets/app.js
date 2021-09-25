@@ -19,6 +19,7 @@ function formHandel() {
     }
     if(answerInput > 20) {
         alert(`tối đa được 20 câu hỏi m nhập ${answerInput} m đòi xôi à  :v`)
+        return
     }
     if (nameInput =='' || answerInput == '' ) {
         alert('nhap du de')
