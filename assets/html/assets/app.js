@@ -262,7 +262,7 @@ function socialRender() {
     ),
     new social(
       ' <i class="fab fa-centercode"></i> ',
-      "TNVN",
+      "Thanh niên việt nam Fake",
       "orange",
       "../html/project3/index.html"
     ),
