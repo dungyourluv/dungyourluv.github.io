@@ -246,6 +246,7 @@ function f() {
     }
     if(i === 100) {
       noti.style.display = 'none';
+      window.location.href = '../html/project3/index.html'
     }
 }
 f();

@@ -45,6 +45,13 @@ button {
     align-items: center;
     flex-direction: column;
 }
+.h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: red;
+}
 .form label {
     font-weight: bold;
     font-size: 18px;
