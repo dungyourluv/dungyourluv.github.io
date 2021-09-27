@@ -1,0 +1,28 @@
+.form-input {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.form-input > * {
+    width: 100%;
+    text-align: center;
+}
+.form-btn,.form-back {
+    border: none;
+    background-color: lightgreen;
+    height: 44px;
+    border-radius: 8px;
+    color: #fff;
+    margin-top: 10px;
+}
