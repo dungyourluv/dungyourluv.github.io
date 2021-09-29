@@ -388,3 +388,8 @@ function nextSong(song, listSong, audio) {
     song[songPlay].classList.add("active--song");
   };
 }
+
+
+/*This is text which testing level lag on linux when use live sever, browser, vscode*/
+
+
