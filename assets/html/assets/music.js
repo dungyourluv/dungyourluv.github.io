@@ -13,6 +13,12 @@ var music = document.querySelector('.music')
 var songPlay = 0;
 var listSong = [
   {
+    nameSong: "Anh đánh rơi người yêu này",
+    author: "Ameee",
+    link: "./assets/audio/anhdanhroinguoiyeunay.mp3",
+    img: "./assets/imgs/image2.jpg",
+  },
+  {
     nameSong: "đón xuân",
     author: "trayde x mien mien",
     link: "./assets/audio/donxuan.mp3",
