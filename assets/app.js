@@ -201,6 +201,12 @@ var slider = document.querySelector(".slider");
 var songPlay = 0;
 var listSong = [
   {
+    nameSong: "Anh đánh rơi người yêu này",
+    author: "Amee",
+    link: "./assets/audio/anhdanhroinguoiyeunay.mp3",
+    img: "./assets/imgs/image1.jpg",
+  },
+  {
     nameSong: "bỏ em vào balo",
     author: "tân trần",
     link: "./assets/audio/boemvaobalo.mp3",
@@ -223,6 +229,12 @@ var listSong = [
     author: "datkaa x kido x prod",
     link: "./assets/audio/haconvuongnang.mp3",
     img: "./assets/imgs/image.jpg",
+  },
+  {
+    nameSong: "double take",
+    author: "Anonymous",
+    link: "./assets/audio/doubletake.mp3",
+    img: "./assets/imgs/image2.jpg",
   },
 ];
 
@@ -388,8 +400,3 @@ function nextSong(song, listSong, audio) {
     song[songPlay].classList.add("active--song");
   };
 }
-
-
-/*This is text which testing level lag on linux when use live sever, browser, vscode*/
-
-
