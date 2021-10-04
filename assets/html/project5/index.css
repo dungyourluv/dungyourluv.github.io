@@ -1,0 +1,151 @@
+/* reset css  */
+@font-face {
+  font-family: a;
+  src: url(./fonts/UTM\ Bebas.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+html {
+  font-family: a;
+  font-size: 62.5%;
+  letter-spacing: 1px;
+}
+body {
+  font-size: 1.8rem;
+}
+/* start */
+.background {
+  background: url(./background_schedule.png) no-repeat center center fixed;
+  min-height: 100vh;
+  background-size: cover;
+}
+.header-logo {
+  padding-top: 46px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 40px;
+  margin-top: 20px;
+}
+.info-form {
+  color: #1f5a6d;
+}
+.info-form > b {
+  color: #f58420;
+}
+.info-form > *:last-child {
+  color: #1f5a6d;
+}
+.check-point {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-image: linear-gradient(to bottom, #2a6f7a, #1d576b);
+}
+.check-text {
+  color: #1f5a6d;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+  margin-top: 40px;
+}
+.checked {
+  margin: 0 10px;
+}
+.btn-home {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+.btn > button {
+  font-family: a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.6rem;
+  outline: none;
+  height: 60px;
+  padding: 0 30px;
+  background-color: #1c4555;
+  border: 6px #3b7868 solid;
+  border-radius: 10px;
+}
+.fake-btn {
+  position: fixed;
+  top: 50%;
+}
+.fake-click {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: pink;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  object-fit: cover;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+}
+
+.form-fake {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  display: none;
+}
+.main-fake {
+  text-align: center;
+  margin-top: 100px;
+}
+.main-fake input {
+  width: 100%;
+  margin-top: 10px;
+  height: 44px;
+  font-size: 2rem;
+}
+.main-fake button {
+  width: 100%;
+  height: 44px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  background-color: lightblue;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.main-fake button:hover {
+  background-color: lightcoral;
+}

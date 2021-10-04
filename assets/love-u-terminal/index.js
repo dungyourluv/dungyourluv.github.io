@@ -25,7 +25,9 @@ const img = `
                                                         
 `;
 
-const show = img;
+const show = dick;
+const time = 1000;
+const speed = 0.5;
 function begin(textss) {
   var i = 0;
   const m = textss.length;
@@ -45,14 +47,21 @@ function begin(textss) {
   }
   start();
 }
-const time = 1000;
-const speed = 0.5;
-setTimeout(() => {
-  console.log("hey, babee!!!");
+function let() {
   setTimeout(() => {
-    console.log("i just want to sayy <333");
+    console.log("hey, babee!!!");
     setTimeout(() => {
-      begin(show);
+      console.log("i just want to sayy <333");
+      setTimeout(() => {
+        begin(show);
+      }, time);
     }, time);
   }, time);
-}, time);
+}
+
+function loop(hello) {
+  const z = hello.length;
+  for (let i = 1; i <= z; i++) {
+    console.log(hello.slice(0, i));
+  }
+}
