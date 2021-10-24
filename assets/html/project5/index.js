@@ -5,6 +5,8 @@ const back = document.querySelector(".back");
 const backFake = document.querySelector(".btn > button");
 const checkForm = document.querySelectorAll(".check-point > p");
 const names = document.querySelector(".info-form > b");
+const week = document.querySelector(".info-form-date");
+const datemoment = document.querySelector(".week-fake");
 
 backFake.onclick = function () {
   btnFake.style.display = "block";
@@ -30,11 +32,13 @@ function unhandle() {
 function submit() {
   btnFake.style.display = "none";
   formFake.style.display = "none";
+  console.log(datemoment.value);
 }
 
 function ramdom() {
   const inputName = document.querySelector(".answer").value;
   names.innerText = inputName;
+  week.innerText = datemoment.value;
   var answers = Math.floor(Math.random() * 30);
   var point = answers * 5;
   var time = "00:" + "0" + Math.floor(Math.random() * 9);
@@ -46,6 +50,3 @@ function ramdom() {
   checkForm[1].innerText = point;
   checkForm[2].innerText = time + ":" + secound;
 }
-checkForm.forEach((f) => {
-  console.log(f);
-});
