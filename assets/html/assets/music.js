@@ -7,9 +7,9 @@ var pauseButton = document.querySelector(".play--pause");
 var mainImgSong = document.querySelector(".play-img");
 var mainNameSong = document.querySelector(".play-info > span");
 var mainTimeSong = document.querySelector(".play-info > p");
-var playInfo = document.querySelector('.play-info')
+var playInfo = document.querySelector(".play-info");
 var slider = document.querySelector(".slider");
-var music = document.querySelector('.music')
+var music = document.querySelector(".music");
 var songPlay = 0;
 var listSong = [
   {
@@ -48,7 +48,6 @@ var listSong = [
     link: "./assets/audio/haconvuongnang.mp3",
     img: "./assets/imgs/image.jpg",
   },
-  
 ];
 
 /* background-image: url(./imgs/image.jpg); */
@@ -223,39 +222,39 @@ var audio = document.querySelector(".audio");
 /* noti event */
 function notiEvent() {
   notiBtnYes.onclick = function () {
-    var i = 0, howManyTimes = 100;
-function f() {
-    notiContent.style.bottom = i + '%'
-    i++;
-    if( i <= howManyTimes ){
-      setTimeout( f,5);
+    var i = 0,
+      howManyTimes = 100;
+    function f() {
+      notiContent.style.bottom = i + "%";
+      i++;
+      if (i <= howManyTimes) {
+        setTimeout(f, 5);
+      }
+      if (i === 100) {
+        noti.style.display = "none";
+        audio.play();
+        playBtnChange(true);
+        animateSong.play();
+        sliderRun();
+        moveSlider();
+      }
     }
-    if(i === 100) {
-      noti.style.display = 'none'
-      audio.play()
-      playBtnChange(true)
-    animateSong.play();
-    sliderRun();
-  moveSlider();
-
-    }
-}
-f();
+    f();
   };
-  notiBtnNo.onclick = function() {
-    var i = 0, howManyTimes = 100;
-function f() {
-    notiContent.style.bottom = i + '%'
-    i++;
-    if( i <= howManyTimes ){
-      setTimeout( f,5);
+  notiBtnNo.onclick = function () {
+    var i = 0,
+      howManyTimes = 100;
+    function f() {
+      notiContent.style.bottom = i + "%";
+      i++;
+      if (i <= howManyTimes) {
+        setTimeout(f, 5);
+      }
+      if (i === 100) {
+        noti.style.display = "none";
+      }
     }
-    if(i === 100) {
-      noti.style.display = 'none';
-      window.location.href = '../html/project3/index.html'
-    }
+    f();
+  };
 }
-f();
-  }
-}
-notiEvent()
+notiEvent();
